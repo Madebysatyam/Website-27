@@ -1,0 +1,29 @@
+PP Neue Montreal is licensed from Pangram Pangram and is not redistributable.
+
+The files in this folder whose names start with PPNeueMontreal are proprietary.
+They are self-hosted here so this portfolio can render the Figma text styles.
+They are not a public font download. Do not copy them into another project,
+repackage them, or treat the repository code license as a font license.
+
+The code license at the repository root does not cover these files.
+
+Faces:
+
+- PPNeueMontrealText-Book.otf and PPNeueMontrealText-Book.woff2
+  Family "PP Neue Montreal Text", style Book.
+  This is the body and caption face. The woff2 was converted from the supplied otf for self-hosting. The otf remains the source file.
+  The file's OS/2 usWeightClass is 350. Stylesheets request it at font-weight 400 because the design token font/weight/regular is 400.
+
+- PPNeueMontreal-Medium.otf and PPNeueMontreal-Medium.woff2
+  Family "Neue Montreal", style Medium. Full name "Neue Montreal Medium".
+  Used for Display, Heading, Label, and Overline at font-weight 500.
+
+- PPNeueMontreal-Regular.otf and PPNeueMontreal-Regular.woff2
+  Family "PP Neue Montreal", style Regular.
+  Matches the umbrella family token. The named text styles do not use it.
+
+- PPNeueMontreal-Book.otf and PPNeueMontreal-Book.woff2
+  Family "PP Neue Montreal", style Book.
+  This is not the Text cut. Body and caption styles do not use it.
+
+JetBrains Mono is a separate typeface, licensed under the SIL Open Font License, not from Pangram Pangram. The Code text style uses JetBrainsMono-Regular.woff2 (Regular, weight 400, size 14px, line-height 20px) from the JetBrains Mono 2.304 release. Its license is JetBrainsMono-OFL.txt in this folder.

@@ -1,0 +1,821 @@
+{
+  "collections": [
+    {
+      "name": "Colour",
+      "modes": [
+        "Light",
+        "Dark"
+      ],
+      "count": 98
+    },
+    {
+      "name": "Spacing",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 17
+    },
+    {
+      "name": "Typography",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 46
+    },
+    {
+      "name": "Radius",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 9
+    },
+    {
+      "name": "Icon size",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 7
+    },
+    {
+      "name": "Border width",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 5
+    },
+    {
+      "name": "Opacity",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 8
+    },
+    {
+      "name": "Grid",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 14
+    },
+    {
+      "name": "Blur",
+      "modes": [
+        "Mode 1"
+      ],
+      "count": 7
+    },
+    {
+      "name": "Semantic",
+      "modes": [
+        "Light",
+        "Dark"
+      ],
+      "count": 42
+    },
+    {
+      "name": "Dimensions",
+      "modes": [
+        "Default"
+      ],
+      "count": 29
+    }
+  ],
+  "text": [
+    {
+      "name": "Display/L",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -4
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/7xl",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/7xl"
+      }
+    },
+    {
+      "name": "Display/M",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 60,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -4
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/6xl",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/6xl"
+      }
+    },
+    {
+      "name": "Display/S",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 56
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -2
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/5xl",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/5xl"
+      }
+    },
+    {
+      "name": "Heading/H1",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 36,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 44
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -2
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/4xl",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/4xl"
+      }
+    },
+    {
+      "name": "Heading/H2",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 30,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 38
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -2
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/3xl",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/3xl"
+      }
+    },
+    {
+      "name": "Heading/H3",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -2
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/2xl",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/2xl"
+      }
+    },
+    {
+      "name": "Heading/H4",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/xl",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/xl"
+      }
+    },
+    {
+      "name": "Heading/H5",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/l",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/l"
+      }
+    },
+    {
+      "name": "Heading/H6",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/m",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/m"
+      }
+    },
+    {
+      "name": "Body/L",
+      "fontFamily": "PP Neue Montreal Text",
+      "fontStyle": "Book",
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/l",
+        "fontStyle": "Typography:font/style/book",
+        "fontFamily": "Typography:font/family/sans-text",
+        "lineHeight": "Typography:font/line-height/l"
+      }
+    },
+    {
+      "name": "Body/M",
+      "fontFamily": "PP Neue Montreal Text",
+      "fontStyle": "Book",
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/m",
+        "fontStyle": "Typography:font/style/book",
+        "fontFamily": "Typography:font/family/sans-text",
+        "lineHeight": "Typography:font/line-height/m"
+      }
+    },
+    {
+      "name": "Body/S",
+      "fontFamily": "PP Neue Montreal Text",
+      "fontStyle": "Book",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/s",
+        "fontStyle": "Typography:font/style/book",
+        "fontFamily": "Typography:font/family/sans-text",
+        "lineHeight": "Typography:font/line-height/s"
+      }
+    },
+    {
+      "name": "Label",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/s",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/s"
+      }
+    },
+    {
+      "name": "Caption",
+      "fontFamily": "PP Neue Montreal Text",
+      "fontStyle": "Book",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/xs",
+        "fontStyle": "Typography:font/style/book",
+        "fontFamily": "Typography:font/family/sans-text",
+        "lineHeight": "Typography:font/line-height/xs"
+      }
+    },
+    {
+      "name": "Overline",
+      "fontFamily": "Neue Montreal",
+      "fontStyle": "Medium",
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 10
+      },
+      "textCase": "UPPER",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/xs",
+        "fontStyle": "Typography:font/style/medium",
+        "fontFamily": "Typography:font/family/sans-display",
+        "lineHeight": "Typography:font/line-height/xs"
+      }
+    },
+    {
+      "name": "Code",
+      "fontFamily": "JetBrains Mono",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "textCase": "ORIGINAL",
+      "textDecoration": "NONE",
+      "paragraphSpacing": 0,
+      "boundVariables": {
+        "fontSize": "Typography:font/size/s",
+        "fontFamily": "Typography:font/family/mono",
+        "lineHeight": "Typography:font/line-height/s",
+        "fontWeight": "Typography:font/weight/regular"
+      }
+    }
+  ],
+  "effect": [
+    {
+      "name": "Elevation/s",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 2,
+          "boundVariables": {},
+          "color": "#0F12170F",
+          "offset": {
+            "x": 0,
+            "y": 1
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    },
+    {
+      "name": "Elevation/m",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 8,
+          "boundVariables": {},
+          "color": "#0F121714",
+          "offset": {
+            "x": 0,
+            "y": 4
+          },
+          "spread": -2,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        },
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 4,
+          "boundVariables": {},
+          "color": "#0F12170A",
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "spread": -2,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    },
+    {
+      "name": "Elevation/l",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 24,
+          "boundVariables": {},
+          "color": "#0F12171A",
+          "offset": {
+            "x": 0,
+            "y": 12
+          },
+          "spread": -4,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        },
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 8,
+          "boundVariables": {},
+          "color": "#0F12170A",
+          "offset": {
+            "x": 0,
+            "y": 4
+          },
+          "spread": -2,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    },
+    {
+      "name": "Elevation/xl",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 48,
+          "boundVariables": {},
+          "color": "#0F12172E",
+          "offset": {
+            "x": 0,
+            "y": 24
+          },
+          "spread": -12,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    },
+    {
+      "name": "Blur/Overlay/sm",
+      "description": "Nav bar / toolbar glass · blur/s",
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 8,
+          "boundVariables": {
+            "radius": "Dimensions:blur/s"
+          },
+          "blurType": "NORMAL"
+        }
+      ]
+    },
+    {
+      "name": "Blur/Overlay/md",
+      "description": "Bottom sheet / popover · blur/m",
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 16,
+          "boundVariables": {
+            "radius": "Dimensions:blur/m"
+          },
+          "blurType": "NORMAL"
+        }
+      ]
+    },
+    {
+      "name": "Blur/Overlay/lg",
+      "description": "Modal scrim · blur/l",
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 16,
+          "boundVariables": {
+            "radius": "Dimensions:blur/m"
+          },
+          "blurType": "NORMAL"
+        }
+      ]
+    },
+    {
+      "name": "Blur/Progressive/Top/Soft",
+      "description": "Native progressive background blur 0 → blur/l",
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 16,
+          "boundVariables": {
+            "radius": "Dimensions:blur/m"
+          },
+          "blurType": "PROGRESSIVE",
+          "startRadius": 0,
+          "startOffset": {
+            "x": 0.5,
+            "y": 1
+          },
+          "endOffset": {
+            "x": 0.5,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blur/Progressive/Top/Strong",
+      "description": "Native progressive background blur 0 → blur/xl",
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 40,
+          "boundVariables": {
+            "radius": "Dimensions:blur/l"
+          },
+          "blurType": "PROGRESSIVE",
+          "startRadius": 0,
+          "startOffset": {
+            "x": 0.5,
+            "y": 1
+          },
+          "endOffset": {
+            "x": 0.5,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blur/Progressive/Bottom/Soft",
+      "description": "Native progressive background blur 0 → blur/l",
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 16,
+          "boundVariables": {
+            "radius": "Dimensions:blur/m"
+          },
+          "blurType": "PROGRESSIVE",
+          "startRadius": 0,
+          "startOffset": {
+            "x": 0.5,
+            "y": 0
+          },
+          "endOffset": {
+            "x": 0.5,
+            "y": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blur/Progressive/Bottom/Strong",
+      "description": "Native progressive background blur 0 → blur/xl",
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 40,
+          "boundVariables": {
+            "radius": "Dimensions:blur/l"
+          },
+          "blurType": "PROGRESSIVE",
+          "startRadius": 0,
+          "startOffset": {
+            "x": 0.5,
+            "y": 0
+          },
+          "endOffset": {
+            "x": 0.5,
+            "y": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blur/Progressive/Thumbnail/Soft",
+      "description": "Native progressive LAYER blur on the image layer: 0 until 75% height → blur/m 16px at bottom",
+      "effects": [
+        {
+          "type": "LAYER_BLUR",
+          "visible": true,
+          "radius": 16,
+          "boundVariables": {
+            "radius": "Dimensions:blur/m"
+          },
+          "blurType": "PROGRESSIVE",
+          "startRadius": 0,
+          "startOffset": {
+            "x": 0.5,
+            "y": 0.75
+          },
+          "endOffset": {
+            "x": 0.5,
+            "y": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blur/Progressive/Thumbnail/Strong",
+      "description": "Native progressive LAYER blur on the image layer: 0 until 60% height → blur/l 24px at bottom",
+      "effects": [
+        {
+          "type": "LAYER_BLUR",
+          "visible": true,
+          "radius": 16,
+          "boundVariables": {
+            "radius": "Dimensions:blur/m"
+          },
+          "blurType": "PROGRESSIVE",
+          "startRadius": 0,
+          "startOffset": {
+            "x": 0.5,
+            "y": 0.6000000238418579
+          },
+          "endOffset": {
+            "x": 0.5,
+            "y": 1
+          }
+        }
+      ]
+    }
+  ],
+  "grid": [
+    {
+      "name": "Grid/Mobile",
+      "layoutGrids": [
+        {
+          "pattern": "COLUMNS",
+          "visible": true,
+          "color": "#FF334D1A",
+          "gutterSize": 16,
+          "alignment": "STRETCH",
+          "count": 4,
+          "offset": 16,
+          "boundVariables": {
+            "offset": "Grid:grid/margin/mobile",
+            "count": "Grid:grid/columns/mobile",
+            "gutterSize": "Grid:grid/gutter/mobile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Grid/Tablet",
+      "layoutGrids": [
+        {
+          "pattern": "COLUMNS",
+          "visible": true,
+          "color": "#FF334D1A",
+          "gutterSize": 24,
+          "alignment": "STRETCH",
+          "count": 8,
+          "offset": 32,
+          "boundVariables": {
+            "offset": "Grid:grid/margin/tablet",
+            "count": "Grid:grid/columns/tablet",
+            "gutterSize": "Grid:grid/gutter/tablet"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Grid/Desktop",
+      "layoutGrids": [
+        {
+          "pattern": "COLUMNS",
+          "visible": true,
+          "color": "#FF334D1A",
+          "gutterSize": 24,
+          "alignment": "STRETCH",
+          "count": 12,
+          "offset": 80,
+          "boundVariables": {
+            "offset": "Grid:grid/margin/desktop",
+            "count": "Grid:grid/columns/desktop",
+            "gutterSize": "Grid:grid/gutter/desktop"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Grid/Baseline 8",
+      "layoutGrids": [
+        {
+          "pattern": "GRID",
+          "visible": true,
+          "color": "#3380FF14",
+          "sectionSize": 8,
+          "boundVariables": {
+            "sectionSize": "Grid:grid/baseline/unit"
+          }
+        }
+      ]
+    }
+  ]
+}

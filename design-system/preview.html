@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madebysatyam-27 — Design system</title>
+  <link rel="preload" href="fonts/PPNeueMontrealText-Book.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PPNeueMontreal-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/preview.css">
+  <script>
+    (function () {
+      var theme = new URLSearchParams(location.search).get("theme");
+      if (theme === "light" || theme === "dark") {
+        document.documentElement.setAttribute("data-theme", theme);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+      <path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24">
+      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+      <path d="M12 9v4" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+      <path d="M12 17h.01" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="i-progress" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-dasharray="3.2 2.4" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="i-send" viewBox="0 0 24 24">
+      <path d="m22 2-7 20-4-9-9-4Z" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+      <path d="M22 2 11 13" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="i-review" viewBox="0 0 24 24">
+      <rect x="6" y="3.5" width="12" height="17" rx="2" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+      <path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+      <path d="m15 9-6 6M9 9l6 6" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+      <path d="M12 7v5l3 2" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+    </symbol>
+    <symbol id="i-duo-star" viewBox="0 0 24 24">
+      <path fill="var(--tag-duo)" stroke="none" d="M12 2.2 19.2 5v6.3c0 4.4-3 7.6-7.2 9.1C7.8 18.9 4.8 15.7 4.8 11.3V5L12 2.2z"/>
+      <path fill="currentColor" stroke="none" d="m12 7.2 1.15 2.33 2.57.37-1.86 1.81.44 2.56L12 13.06l-2.3 1.21.44-2.56-1.86-1.81 2.57-.37L12 7.2z"/>
+    </symbol>
+    <symbol id="i-duo-scroll" viewBox="0 0 24 24">
+      <path fill="var(--tag-duo)" stroke="none" d="M7 3.5h10a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2z"/>
+      <path fill="none" stroke="currentColor" vector-effect="non-scaling-stroke" d="M8.5 8.5h7M8.5 12h7M8.5 15.5h4.5"/>
+    </symbol>
+    <symbol id="i-duo-feather" viewBox="0 0 24 24">
+      <path fill="var(--tag-duo)" stroke="none" d="M20 4c-7.2.6-13 6.2-15.2 14.6 5.2-.8 9.4-4.2 12.2-9.2.8 3.2.2 6.2-1.2 8.6C18.2 13.2 20 8 20 4z"/>
+      <path fill="none" stroke="currentColor" vector-effect="non-scaling-stroke" d="M8 16.2c2.2-2.4 5.2-5.4 8.4-8"/>
+    </symbol>
+    <symbol id="i-duo-tap" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8" fill="var(--tag-duo)" stroke="none"/>
+      <circle cx="12" cy="12" r="3.25" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/>
+      <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+    </symbol>
+  </svg>
+
+  <header class="preview-header">
+    <div class="preview-header__titles">
+      <p class="text-overline">Madebysatyam-27</p>
+      <p class="text-label">Design system preview</p>
+    </div>
+    <div class="theme-switch" role="group" aria-label="Colour theme">
+      <button type="button" data-set-theme="light">Light</button>
+      <button type="button" data-set-theme="dark">Dark</button>
+      <button type="button" data-set-theme="system">System</button>
+    </div>
+  </header>
+
+  <main class="layout-grid preview-main">
+    <section class="preview-section span-all" id="intro">
+      <h1 class="text-display-s">Tokens, type, tags, blur.</h1>
+      <p class="text-body-l lede">Body copy is PP Neue Montreal Text Book. Display, headings, labels, and overlines are Neue Montreal Medium. Code is self-hosted JetBrains Mono Regular.</p>
+      <p class="text-code">const weight = 400; // JetBrains Mono Regular, 14/20</p>
+    </section>
+
+    <section class="preview-section span-all" id="colours">
+      <div>
+        <p class="text-overline">Semantic colour</p>
+        <h2 class="text-heading-h2">42 published colour tokens</h2>
+      </div>
+      <div class="swatches" id="swatches"></div>
+    </section>
+
+    <section class="preview-section span-all" id="type">
+      <div>
+        <p class="text-overline">Typography</p>
+        <h2 class="text-heading-h2">16 text styles</h2>
+      </div>
+      <div class="type-list">
+        <div class="type-row"><p class="text-code type-meta">Display/L · Neue Montreal Medium · 72/80 · -4%</p><p class="text-display-l">Display large</p></div>
+        <div class="type-row"><p class="text-code type-meta">Display/M · Neue Montreal Medium · 60/68 · -4%</p><p class="text-display-m">Display medium</p></div>
+        <div class="type-row"><p class="text-code type-meta">Display/S · Neue Montreal Medium · 48/56 · -2%</p><p class="text-display-s">Display small</p></div>
+        <div class="type-row"><p class="text-code type-meta">Heading/H1 · 36/44 · -2%</p><p class="text-heading-h1">Heading one</p></div>
+        <div class="type-row"><p class="text-code type-meta">Heading/H2 · 30/38 · -2%</p><p class="text-heading-h2">Heading two</p></div>
+        <div class="type-row"><p class="text-code type-meta">Heading/H3 · 24/32 · -2%</p><p class="text-heading-h3">Heading three</p></div>
+        <div class="type-row"><p class="text-code type-meta">Heading/H4 · 20/28</p><p class="text-heading-h4">Heading four</p></div>
+        <div class="type-row"><p class="text-code type-meta">Heading/H5 · 18/28</p><p class="text-heading-h5">Heading five</p></div>
+        <div class="type-row"><p class="text-code type-meta">Heading/H6 · 16/24</p><p class="text-heading-h6">Heading six</p></div>
+        <div class="type-row"><p class="text-code type-meta">Body/L · PP Neue Montreal Text Book · 18/28</p><p class="text-body-l">Body large stays in Book, the text cut, at weight 400.</p></div>
+        <div class="type-row"><p class="text-code type-meta">Body/M · PP Neue Montreal Text Book · 16/24</p><p class="text-body-m">Body medium is the default reading size for this system.</p></div>
+        <div class="type-row"><p class="text-code type-meta">Body/S · PP Neue Montreal Text Book · 14/20</p><p class="text-body-s">Body small is Book as well, not Medium.</p></div>
+        <div class="type-row"><p class="text-code type-meta">Label · Neue Montreal Medium · 14/20</p><p class="text-label">Label</p></div>
+        <div class="type-row"><p class="text-code type-meta">Caption · PP Neue Montreal Text Book · 12/16</p><p class="text-caption">Caption uses the text Book face.</p></div>
+        <div class="type-row"><p class="text-code type-meta">Overline · Neue Montreal Medium · 12/16 · +10% · uppercase</p><p class="text-overline">Overline</p></div>
+        <div class="type-row"><p class="text-code type-meta">Code · JetBrains Mono Regular · 14/20</p><p class="text-code">il1O0 &#123; font-weight: 400; &#125;</p></div>
+      </div>
+    </section>
+
+    <section class="preview-section span-all" id="dimensions">
+      <div>
+        <p class="text-overline">Dimensions</p>
+        <h2 class="text-heading-h2">Space and radius</h2>
+      </div>
+      <div class="space-row" id="spaces"></div>
+      <div class="radius-row">
+        <div class="radius-sample" style="border-radius: var(--radius-none)"></div>
+        <div class="radius-sample" style="border-radius: var(--radius-s)"></div>
+        <div class="radius-sample" style="border-radius: var(--radius-m)"></div>
+        <div class="radius-sample" style="border-radius: var(--radius-l)"></div>
+        <div class="radius-sample" style="border-radius: var(--radius-full)"></div>
+      </div>
+      <p class="text-caption">radius/none, radius/s, radius/m, radius/l, radius/full. Bars above are space/2xs through space/3xl.</p>
+    </section>
+
+    <section class="preview-section span-all" id="tags">
+      <div>
+        <p class="text-overline">Tag</p>
+        <h2 class="text-heading-h2">Colour × size</h2>
+      </div>
+      <div class="stack" id="tag-s"></div>
+      <div class="stack" id="tag-m"></div>
+      <div class="stack" id="tag-l"></div>
+      <h3 class="text-heading-h4">Status</h3>
+      <div class="stack" id="tag-status"></div>
+      <h3 class="text-heading-h4">Category</h3>
+      <div class="stack" id="tag-category"></div>
+      <span class="tag tag--m tag--blue tag--no-icon"><span class="tag__label text-heading-h6">No icon</span></span>
+    </section>
+
+    <section class="preview-section span-all" id="elevation">
+      <div>
+        <p class="text-overline">Elevation</p>
+        <h2 class="text-heading-h2">Shadows</h2>
+      </div>
+      <div class="elev-row">
+        <div class="elev-card elevation-s"><span class="text-label">Elevation/s</span></div>
+        <div class="elev-card elevation-m"><span class="text-label">Elevation/m</span></div>
+        <div class="elev-card elevation-l"><span class="text-label">Elevation/l</span></div>
+        <div class="elev-card elevation-xl"><span class="text-label">Elevation/xl</span></div>
+      </div>
+      <h3 class="text-heading-h4">Overlay blur</h3>
+      <div class="blur-overlay-row">
+        <div class="blur-overlay-card"><span class="blur-overlay-sm text-label">Blur/Overlay/sm</span></div>
+        <div class="blur-overlay-card"><span class="blur-overlay-md text-label">Blur/Overlay/md</span></div>
+        <div class="blur-overlay-card"><span class="blur-overlay-lg text-label">Blur/Overlay/lg</span></div>
+      </div>
+    </section>
+
+    <section class="preview-section span-all" id="blurs">
+      <div>
+        <p class="text-overline">Progressive blur</p>
+        <h2 class="text-heading-h2">Top, bottom, thumbnail</h2>
+      </div>
+      <div class="blur-board" id="blur-board"></div>
+      <div class="thumb-board" id="thumbs"></div>
+    </section>
+
+    <section class="preview-section span-all" id="grids">
+      <div>
+        <p class="text-overline">Grid</p>
+        <h2 class="text-heading-h2">375, 768, 1440</h2>
+      </div>
+      <div class="grid-scroll">
+        <div class="grid-frame">
+          <p class="text-code">Grid/Mobile · 4 · margin 16 · gutter 16</p>
+          <div class="grid-mobile" id="grid-mobile"></div>
+        </div>
+        <div class="grid-frame">
+          <p class="text-code">Grid/Tablet · 8 · margin 32 · gutter 24</p>
+          <div class="grid-tablet" id="grid-tablet"></div>
+        </div>
+        <div class="grid-frame">
+          <p class="text-code">Grid/Desktop · 12 · margin 80 · gutter 24 · inner 1280</p>
+          <div class="grid-desktop" id="grid-desktop"></div>
+        </div>
+      </div>
+      <div class="grid-baseline-8 baseline-demo" aria-hidden="true"></div>
+      <p class="text-caption">Baseline grid is 8px. The line colour is the style colour #3380FF14.</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var colours = [
+        "surface-primary", "surface-secondary", "surface-tertiary", "surface-inverse",
+        "overlay-scrim",
+        "text-primary", "text-secondary", "text-tertiary", "text-disabled", "text-inverse",
+        "border-strong", "border-default", "border-subtle",
+        "colour-red-solid", "colour-red-tint", "colour-red-text", "colour-red-on",
+        "colour-orange-solid", "colour-orange-tint", "colour-orange-text", "colour-orange-on",
+        "colour-yellow-solid", "colour-yellow-tint", "colour-yellow-text", "colour-yellow-on",
+        "colour-green-solid", "colour-green-tint", "colour-green-text", "colour-green-on",
+        "colour-blue-solid", "colour-blue-tint", "colour-blue-text", "colour-blue-on",
+        "colour-purple-solid", "colour-purple-tint", "colour-purple-text", "colour-purple-on",
+        "colour-pink-solid", "colour-pink-tint", "colour-pink-text", "colour-pink-on",
+        "accent-default"
+      ];
+      var swatches = document.getElementById("swatches");
+      colours.forEach(function (name) {
+        var item = document.createElement("div");
+        item.className = "swatch";
+        item.innerHTML = '<span class="swatch__chip" style="background: var(--' + name + ')"></span>' +
+          '<span class="swatch__meta"><span class="text-label">' + name.replaceAll("-", "/") + '</span>' +
+          '<span class="text-code">--' + name + '</span></span>';
+        swatches.appendChild(item);
+      });
+
+      var spaces = ["2xs", "xs", "s", "m", "l", "xl", "2xl", "3xl"];
+      var spaceRoot = document.getElementById("spaces");
+      spaces.forEach(function (name) {
+        var item = document.createElement("div");
+        item.className = "space-sample";
+        item.innerHTML = '<i style="width: var(--space-' + name + ')"></i><span class="text-code">space/' + name + '</span>';
+        spaceRoot.appendChild(item);
+      });
+
+      function icon(id) {
+        return '<svg class="tag__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#' + id + '"></use></svg>';
+      }
+      function tag(size, colour, label, iconId, labelClass) {
+        return '<span class="tag tag--' + size + ' tag--' + colour + '">' +
+          icon(iconId) +
+          '<span class="tag__label ' + labelClass + '">' + label + '</span></span>';
+      }
+      var names = ["neutral", "red", "orange", "yellow", "green", "blue", "purple", "pink"];
+      document.getElementById("tag-s").innerHTML = names.map(function (c) {
+        return tag("s", c, "Label", "i-check", "text-label");
+      }).join("");
+      document.getElementById("tag-m").innerHTML = names.map(function (c) {
+        return tag("m", c, "Label", "i-check", "text-heading-h6");
+      }).join("");
+      document.getElementById("tag-l").innerHTML = names.map(function (c) {
+        return tag("l", c, "Label", "i-check", "text-heading-h3");
+      }).join("");
+
+      var status = [
+        ["orange", "Pending", "i-alert"],
+        ["blue", "In progress", "i-progress"],
+        ["purple", "Submitted", "i-send"],
+        ["yellow", "In review", "i-review"],
+        ["green", "Success", "i-check"],
+        ["red", "Failed", "i-x"],
+        ["neutral", "Expired", "i-clock"]
+      ];
+      document.getElementById("tag-status").innerHTML = status.map(function (row) {
+        return tag("m", row[0], row[1], row[2], "text-heading-h6");
+      }).join("");
+
+      var cats = [
+        ["blue", "Brand & Style", "i-duo-star"],
+        ["green", "Compliance", "i-duo-scroll"],
+        ["purple", "Content Safety", "i-duo-feather"],
+        ["neutral", "Approval Trigger", "i-duo-tap"]
+      ];
+      document.getElementById("tag-category").innerHTML = cats.map(function (row) {
+        return tag("l", row[0], row[1], row[2], "text-heading-h3");
+      }).join("");
+
+      function layers() {
+        return '<div class="progressive-blur__layer"></div>'.repeat(4) +
+          '<div class="progressive-blur__fade"></div>';
+      }
+      function stage(edge, intensity, mode) {
+        var lines = "";
+        for (var i = 1; i <= 12; i += 1) {
+          lines += '<p class="text-body-s">Sample line ' + i + ' behind the blur.</p>';
+        }
+        return '<div class="blur-stage' + (mode === "dark" ? " blur-stage--dark" : "") + '">' +
+          '<div class="blur-stage__content">' + lines + '</div>' +
+          '<div class="progressive-blur progressive-blur--' + edge + ' progressive-blur--' + intensity + ' progressive-blur--' + mode + '">' +
+          layers() + '</div></div>';
+      }
+      document.getElementById("blur-board").innerHTML = [
+        stage("top", "soft", "light"),
+        stage("top", "strong", "light"),
+        stage("bottom", "soft", "light"),
+        stage("bottom", "strong", "dark")
+      ].join("");
+
+      function rows() {
+        var html = '<ol class="thumbnail-blur__rows">';
+        for (var i = 1; i <= 9; i += 1) {
+          html += '<li class="text-body-s">Thumbnail content row ' + i + '</li>';
+        }
+        return html + "</ol>";
+      }
+      function art() {
+        return '<div class="thumbnail-blur__art"></div>' + rows();
+      }
+      function thumb(intensity, mode) {
+        return '<article class="thumbnail-blur thumbnail-blur--' + intensity + ' thumbnail-blur--' + mode + '">' +
+          '<div class="thumbnail-blur__sharp">' + art() + '</div>' +
+          '<div class="thumbnail-blur__blur" aria-hidden="true">' + art() + '</div>' +
+          '<div class="thumbnail-blur__fade"></div>' +
+          '<p class="thumbnail-blur__caption text-caption">Card caption</p></article>';
+      }
+      document.getElementById("thumbs").innerHTML = [
+        thumb("soft", "light"),
+        thumb("strong", "light"),
+        thumb("soft", "dark"),
+        thumb("strong", "dark")
+      ].join("");
+
+      [["grid-mobile", 4], ["grid-tablet", 8], ["grid-desktop", 12]].forEach(function (pair) {
+        var root = document.getElementById(pair[0]);
+        for (var i = 0; i < pair[1]; i += 1) {
+          var cell = document.createElement("div");
+          cell.className = "grid-cell";
+          root.appendChild(cell);
+        }
+      });
+
+      var buttons = document.querySelectorAll("[data-set-theme]");
+      function paint() {
+        var current = document.documentElement.getAttribute("data-theme") || "system";
+        buttons.forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-theme") === current ? "true" : "false");
+        });
+      }
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var value = button.getAttribute("data-set-theme");
+          if (value === "system") document.documentElement.removeAttribute("data-theme");
+          else document.documentElement.setAttribute("data-theme", value);
+          paint();
+        });
+      });
+      paint();
+    })();
+  </script>
+</body>
+</html>

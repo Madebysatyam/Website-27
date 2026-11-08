@@ -1,0 +1,15 @@
+{
+  "name": "website-27",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portfolio for Madebysatyam-27. Plain CSS design system taken from the Figma variables, text styles, and components.",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory design-system",
+    "build": "python3 design-system/scripts/build.py",
+    "verify-tokens": "python3 design-system/scripts/verify-tokens.py",
+    "generate-tokens": "python3 design-system/scripts/generate-tokens.py"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

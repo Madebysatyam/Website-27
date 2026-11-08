@@ -1,0 +1,981 @@
+/* Generated from design-system/source/tokens.json.
+   Do not edit by hand. Run: python3 design-system/scripts/generate-tokens.py
+   Source: Figma Madebysatyam-27 (PiRNuJiRECiSiCr6isN26H). Exported 2026-11-08.
+   Published custom properties are Semantic (42) and Dimensions (29).
+   Hidden primitives are private base variables. Semantic colour aliases
+   resolve against the Colour collection Light scale. The Colour Dark
+   scale is the inverted style-sheet palette and is not the UI theme.
+   Where a hidden primitive shares a css name with a published token,
+   the published token keeps that name and the primitive is --raw-*. */
+
+:root,
+[data-theme="light"] {
+
+  /* Colour */
+  /* Colour neutral/50 hidden */
+  --neutral-50: #F7F7F7;
+  /* Colour neutral/100 hidden */
+  --neutral-100: #E3E3E3;
+  /* Colour neutral/200 hidden */
+  --neutral-200: #D0D0D0;
+  /* Colour neutral/300 hidden */
+  --neutral-300: #BDBDBD;
+  /* Colour neutral/400 hidden */
+  --neutral-400: #ABABAB;
+  /* Colour neutral/500 hidden */
+  --neutral-500: #999999;
+  /* Colour neutral/600 hidden */
+  --neutral-600: #7F7F7F;
+  /* Colour neutral/700 hidden */
+  --neutral-700: #666666;
+  /* Colour neutral/800 hidden */
+  --neutral-800: #4F4F4F;
+  /* Colour neutral/900 hidden */
+  --neutral-900: #383838;
+  /* Colour neutral/950 hidden */
+  --neutral-950: #232323;
+  /* Colour neutral/1000 hidden */
+  --neutral-1000: #0F0F0F;
+  /* Colour red/50 hidden */
+  --red-50: #FFF4F3;
+  /* Colour red/100 hidden */
+  --red-100: #FFDCD9;
+  /* Colour red/200 hidden */
+  --red-200: #FFC4BF;
+  /* Colour red/300 hidden */
+  --red-300: #FFAAA4;
+  /* Colour red/400 hidden */
+  --red-400: #FF8E88;
+  /* Colour red/500 hidden */
+  --red-500: #FF6E6B;
+  /* Colour red/600 hidden */
+  --red-600: #E34E4F;
+  /* Colour red/700 hidden */
+  --red-700: #C62C34;
+  /* Colour red/800 hidden */
+  --red-800: #A6001D;
+  /* Colour red/900 hidden */
+  --red-900: #7D0013;
+  /* Colour red/950 hidden */
+  --red-950: #56000A;
+  /* Colour red/1000 hidden */
+  --red-1000: #320003;
+  /* Colour orange/50 hidden */
+  --orange-50: #FFF4F0;
+  /* Colour orange/100 hidden */
+  --orange-100: #FFE2D5;
+  /* Colour orange/200 hidden */
+  --orange-200: #FFCEBA;
+  /* Colour orange/300 hidden */
+  --orange-300: #FFBA9D;
+  /* Colour orange/400 hidden */
+  --orange-400: #FFA67E;
+  /* Colour orange/500 hidden */
+  --orange-500: #FF8F5C;
+  /* Colour orange/600 hidden */
+  --orange-600: #E17039;
+  /* Colour orange/700 hidden */
+  --orange-700: #C2510D;
+  /* Colour orange/800 hidden */
+  --orange-800: #9A3C00;
+  /* Colour orange/900 hidden */
+  --orange-900: #732B00;
+  /* Colour orange/950 hidden */
+  --orange-950: #4D1A00;
+  /* Colour orange/1000 hidden */
+  --orange-1000: #2B0A00;
+  /* Colour yellow/50 hidden */
+  --yellow-50: #FCF8DA;
+  /* Colour yellow/100 hidden */
+  --yellow-100: #FFF6BB;
+  /* Colour yellow/200 hidden */
+  --yellow-200: #FFF3A5;
+  /* Colour yellow/300 hidden */
+  --yellow-300: #FFF08F;
+  /* Colour yellow/400 hidden */
+  --yellow-400: #FFEC77;
+  /* Colour yellow/500 hidden */
+  --yellow-500: #FFE95C;
+  /* Colour yellow/600 hidden */
+  --yellow-600: #D8C112;
+  /* Colour yellow/700 hidden */
+  --yellow-700: #AE9B00;
+  /* Colour yellow/800 hidden */
+  --yellow-800: #857600;
+  /* Colour yellow/900 hidden */
+  --yellow-900: #5F5400;
+  /* Colour yellow/950 hidden */
+  --yellow-950: #3B3300;
+  /* Colour yellow/1000 hidden */
+  --yellow-1000: #1A1600;
+  /* Colour green/50 hidden */
+  --green-50: #E5FFE8;
+  /* Colour green/100 hidden */
+  --green-100: #D2FFD9;
+  /* Colour green/200 hidden */
+  --green-200: #BEFFC9;
+  /* Colour green/300 hidden */
+  --green-300: #A7FFB8;
+  /* Colour green/400 hidden */
+  --green-400: #8DFFA5;
+  /* Colour green/500 hidden */
+  --green-500: #6BFF91;
+  /* Colour green/600 hidden */
+  --green-600: #2FD969;
+  /* Colour green/700 hidden */
+  --green-700: #00B14D;
+  /* Colour green/800 hidden */
+  --green-800: #00883A;
+  /* Colour green/900 hidden */
+  --green-900: #006127;
+  /* Colour green/950 hidden */
+  --green-950: #003D16;
+  /* Colour green/1000 hidden */
+  --green-1000: #001D07;
+  /* Colour blue/50 hidden */
+  --blue-50: #F1F7FF;
+  /* Colour blue/100 hidden */
+  --blue-100: #D5E7FF;
+  /* Colour blue/200 hidden */
+  --blue-200: #B8D7FF;
+  /* Colour blue/300 hidden */
+  --blue-300: #9BC7FF;
+  /* Colour blue/400 hidden */
+  --blue-400: #7DB6FF;
+  /* Colour blue/500 hidden */
+  --blue-500: #5CA5FF;
+  /* Colour blue/600 hidden */
+  --blue-600: #3D8AE5;
+  /* Colour blue/700 hidden */
+  --blue-700: #1B6FCA;
+  /* Colour blue/800 hidden */
+  --blue-800: #0055A8;
+  /* Colour blue/900 hidden */
+  --blue-900: #003F7E;
+  /* Colour blue/950 hidden */
+  --blue-950: #002957;
+  /* Colour blue/1000 hidden */
+  --blue-1000: #001533;
+  /* Colour purple/50 hidden */
+  --purple-50: #F8F5FF;
+  /* Colour purple/100 hidden */
+  --purple-100: #E7DBFF;
+  /* Colour purple/200 hidden */
+  --purple-200: #D7C1FF;
+  /* Colour purple/300 hidden */
+  --purple-300: #C8A7FF;
+  /* Colour purple/400 hidden */
+  --purple-400: #B98AFF;
+  /* Colour purple/500 hidden */
+  --purple-500: #AB6BFF;
+  /* Colour purple/600 hidden */
+  --purple-600: #954FE8;
+  /* Colour purple/700 hidden */
+  --purple-700: #7F30D0;
+  /* Colour purple/800 hidden */
+  --purple-800: #6904B6;
+  /* Colour purple/900 hidden */
+  --purple-900: #4F008C;
+  /* Colour purple/950 hidden */
+  --purple-950: #370063;
+  /* Colour purple/1000 hidden */
+  --purple-1000: #20003D;
+  /* Colour pink/50 hidden */
+  --pink-50: #FFF3F8;
+  /* Colour pink/100 hidden */
+  --pink-100: #FFDBEB;
+  /* Colour pink/200 hidden */
+  --pink-200: #FFC3DE;
+  /* Colour pink/300 hidden */
+  --pink-300: #FFA9D2;
+  /* Colour pink/400 hidden */
+  --pink-400: #FF8CC6;
+  /* Colour pink/500 hidden */
+  --pink-500: #FF6BBA;
+  /* Colour pink/600 hidden */
+  --pink-600: #E2499F;
+  /* Colour pink/700 hidden */
+  --pink-700: #C42384;
+  /* Colour pink/800 hidden */
+  --pink-800: #A10069;
+  /* Colour pink/900 hidden */
+  --pink-900: #78004D;
+  /* Colour pink/950 hidden */
+  --pink-950: #520033;
+  /* Colour pink/1000 hidden */
+  --pink-1000: #2F001B;
+
+  /* Spacing */
+  /* Spacing space/none hidden */
+  --raw-spacing-space-none: 0px;
+  /* Spacing space/4xs hidden */
+  --space-4xs: 2px;
+  /* Spacing space/3xs hidden */
+  --space-3xs: 4px;
+  /* Spacing space/2xs hidden */
+  --raw-spacing-space-2xs: 6px;
+  /* Spacing space/xs hidden */
+  --raw-spacing-space-xs: 8px;
+  /* Spacing space/s hidden */
+  --raw-spacing-space-s: 12px;
+  /* Spacing space/m hidden */
+  --raw-spacing-space-m: 16px;
+  /* Spacing space/l hidden */
+  --raw-spacing-space-l: 20px;
+  /* Spacing space/xl hidden */
+  --raw-spacing-space-xl: 24px;
+  /* Spacing space/2xl hidden */
+  --raw-spacing-space-2xl: 32px;
+  /* Spacing space/3xl hidden */
+  --raw-spacing-space-3xl: 40px;
+  /* Spacing space/4xl hidden */
+  --space-4xl: 48px;
+  /* Spacing space/5xl hidden */
+  --space-5xl: 56px;
+  /* Spacing space/6xl hidden */
+  --space-6xl: 64px;
+  /* Spacing space/7xl hidden */
+  --space-7xl: 80px;
+  /* Spacing space/8xl hidden */
+  --space-8xl: 96px;
+  /* Spacing space/9xl hidden */
+  --space-9xl: 128px;
+
+  /* Typography */
+  /* Typography font/family/sans hidden */
+  --font-family-sans: "PP Neue Montreal";
+  /* Typography font/family/mono hidden */
+  --font-family-mono: "JetBrains Mono";
+  /* Typography font/size/xs hidden */
+  --font-size-xs: 12px;
+  /* Typography font/line-height/xs hidden */
+  --font-line-height-xs: 16px;
+  /* Typography font/size/s hidden */
+  --font-size-s: 14px;
+  /* Typography font/line-height/s hidden */
+  --font-line-height-s: 20px;
+  /* Typography font/size/m hidden */
+  --font-size-m: 16px;
+  /* Typography font/line-height/m hidden */
+  --font-line-height-m: 24px;
+  /* Typography font/size/l hidden */
+  --font-size-l: 18px;
+  /* Typography font/line-height/l hidden */
+  --font-line-height-l: 28px;
+  /* Typography font/size/xl hidden */
+  --font-size-xl: 20px;
+  /* Typography font/line-height/xl hidden */
+  --font-line-height-xl: 28px;
+  /* Typography font/size/2xl hidden */
+  --font-size-2xl: 24px;
+  /* Typography font/line-height/2xl hidden */
+  --font-line-height-2xl: 32px;
+  /* Typography font/size/3xl hidden */
+  --font-size-3xl: 30px;
+  /* Typography font/line-height/3xl hidden */
+  --font-line-height-3xl: 38px;
+  /* Typography font/size/4xl hidden */
+  --font-size-4xl: 36px;
+  /* Typography font/line-height/4xl hidden */
+  --font-line-height-4xl: 44px;
+  /* Typography font/size/5xl hidden */
+  --font-size-5xl: 48px;
+  /* Typography font/line-height/5xl hidden */
+  --font-line-height-5xl: 56px;
+  /* Typography font/size/6xl hidden */
+  --font-size-6xl: 60px;
+  /* Typography font/line-height/6xl hidden */
+  --font-line-height-6xl: 68px;
+  /* Typography font/size/7xl hidden */
+  --font-size-7xl: 72px;
+  /* Typography font/line-height/7xl hidden */
+  --font-line-height-7xl: 80px;
+  /* Typography font/size/8xl hidden */
+  --font-size-8xl: 96px;
+  /* Typography font/line-height/8xl hidden */
+  --font-line-height-8xl: 104px;
+  /* Typography font/weight/light hidden */
+  --font-weight-light: 300;
+  /* Typography font/weight/regular hidden */
+  --font-weight-regular: 400;
+  /* Typography font/weight/medium hidden */
+  --font-weight-medium: 500;
+  /* Typography font/weight/semibold hidden */
+  --font-weight-semibold: 600;
+  /* Typography font/weight/bold hidden */
+  --font-weight-bold: 700;
+  /* Typography font/line-height-ratio/none hidden */
+  --font-line-height-ratio-none: 1;
+  /* Typography font/line-height-ratio/tight hidden */
+  --font-line-height-ratio-tight: 1.149999976158142;
+  /* Typography font/line-height-ratio/snug hidden */
+  --font-line-height-ratio-snug: 1.2999999523162842;
+  /* Typography font/line-height-ratio/normal hidden */
+  --font-line-height-ratio-normal: 1.5;
+  /* Typography font/line-height-ratio/relaxed hidden */
+  --font-line-height-ratio-relaxed: 1.649999976158142;
+  /* Typography font/letter-spacing/tighter hidden */
+  --font-letter-spacing-tighter: -4%;
+  /* Typography font/letter-spacing/tight hidden */
+  --font-letter-spacing-tight: -2%;
+  /* Typography font/letter-spacing/normal hidden */
+  --font-letter-spacing-normal: 0%;
+  /* Typography font/letter-spacing/wide hidden */
+  --font-letter-spacing-wide: 2%;
+  /* Typography font/letter-spacing/wider hidden */
+  --font-letter-spacing-wider: 5%;
+  /* Typography font/letter-spacing/widest hidden */
+  --font-letter-spacing-widest: 10%;
+
+  /* Radius */
+  /* Radius radius/none hidden */
+  --raw-radius-radius-none: 0px;
+  /* Radius radius/xs hidden */
+  --radius-xs: 2px;
+  /* Radius radius/s hidden */
+  --raw-radius-radius-s: 4px;
+  /* Radius radius/m hidden */
+  --raw-radius-radius-m: 8px;
+  /* Radius radius/l hidden */
+  --raw-radius-radius-l: 12px;
+  /* Radius radius/xl hidden */
+  --radius-xl: 16px;
+  /* Radius radius/2xl hidden */
+  --radius-2xl: 24px;
+  /* Radius radius/3xl hidden */
+  --radius-3xl: 32px;
+  /* Radius radius/full hidden */
+  --raw-radius-radius-full: 9999px;
+
+  /* Icon size */
+  /* Icon size icon/xs hidden */
+  --icon-xs: 12px;
+  /* Icon size icon/s hidden */
+  --raw-icon-size-icon-s: 16px;
+  /* Icon size icon/m hidden */
+  --raw-icon-size-icon-m: 20px;
+  /* Icon size icon/l hidden */
+  --raw-icon-size-icon-l: 24px;
+  /* Icon size icon/xl hidden */
+  --raw-icon-size-icon-xl: 32px;
+  /* Icon size icon/2xl hidden */
+  --icon-2xl: 40px;
+  /* Icon size icon/3xl hidden */
+  --icon-3xl: 48px;
+
+  /* Border width */
+  /* Border width border-width/none hidden */
+  --border-width-none: 0px;
+  /* Border width border-width/s hidden */
+  --border-width-s: 1px;
+  /* Border width border-width/m hidden */
+  --border-width-m: 1.5px;
+  /* Border width border-width/l hidden */
+  --border-width-l: 2px;
+  /* Border width border-width/xl hidden */
+  --border-width-xl: 4px;
+
+  /* Opacity */
+  /* Opacity opacity/0 hidden */
+  --opacity-0: 0%;
+  /* Opacity opacity/5 hidden */
+  --opacity-5: 5%;
+  /* Opacity opacity/10 hidden */
+  --opacity-10: 10%;
+  /* Opacity opacity/20 hidden */
+  --opacity-20: 20%;
+  /* Opacity opacity/40 hidden */
+  --opacity-40: 40%;
+  /* Opacity opacity/60 hidden */
+  --opacity-60: 60%;
+  /* Opacity opacity/80 hidden */
+  --opacity-80: 80%;
+  /* Opacity opacity/100 hidden */
+  --opacity-100: 100%;
+
+  /* Typography */
+  /* Typography font/family/sans-text hidden */
+  --font-family-sans-text: "PP Neue Montreal Text";
+  /* Typography font/family/sans-display hidden */
+  --font-family-sans-display: "Neue Montreal";
+  /* Typography font/style/book hidden */
+  --font-style-book: "Book";
+  /* Typography font/style/medium hidden */
+  --font-style-medium: "Medium";
+
+  /* Grid */
+  /* Grid grid/breakpoint/mobile hidden */
+  --grid-breakpoint-mobile: 375px;
+  /* Grid grid/columns/mobile hidden */
+  --grid-columns-mobile: 4;
+  /* Grid grid/margin/mobile hidden alias Spacing:space/m */
+  --grid-margin-mobile: var(--raw-spacing-space-m);
+  /* Grid grid/gutter/mobile hidden alias Spacing:space/m */
+  --grid-gutter-mobile: var(--raw-spacing-space-m);
+  /* Grid grid/breakpoint/tablet hidden */
+  --grid-breakpoint-tablet: 768px;
+  /* Grid grid/columns/tablet hidden */
+  --grid-columns-tablet: 8;
+  /* Grid grid/margin/tablet hidden alias Spacing:space/2xl */
+  --grid-margin-tablet: var(--raw-spacing-space-2xl);
+  /* Grid grid/gutter/tablet hidden alias Spacing:space/xl */
+  --grid-gutter-tablet: var(--raw-spacing-space-xl);
+  /* Grid grid/breakpoint/desktop hidden */
+  --grid-breakpoint-desktop: 1440px;
+  /* Grid grid/columns/desktop hidden */
+  --grid-columns-desktop: 12;
+  /* Grid grid/margin/desktop hidden alias Spacing:space/7xl */
+  --grid-margin-desktop: var(--space-7xl);
+  /* Grid grid/gutter/desktop hidden alias Spacing:space/xl */
+  --grid-gutter-desktop: var(--raw-spacing-space-xl);
+  /* Grid grid/max-content/desktop hidden */
+  --grid-max-content-desktop: 1280px;
+  /* Grid grid/baseline/unit hidden alias Spacing:space/xs */
+  --grid-baseline-unit: var(--raw-spacing-space-xs);
+
+  /* Blur */
+  /* Blur blur/none hidden */
+  --blur-none: 0px;
+  /* Blur blur/xs hidden */
+  --blur-xs: 4px;
+  /* Blur blur/s hidden */
+  --raw-blur-blur-s: 8px;
+  /* Blur blur/m hidden */
+  --raw-blur-blur-m: 16px;
+  /* Blur blur/l hidden */
+  --raw-blur-blur-l: 24px;
+  /* Blur blur/xl hidden */
+  --blur-xl: 40px;
+  /* Blur blur/2xl hidden */
+  --blur-2xl: 64px;
+
+  /* Colour */
+  /* Colour base/white hidden */
+  --base-white: #FFFFFF;
+  /* Colour base/black hidden */
+  --base-black: #000000;
+
+  /* Dimensions */
+  /* Dimensions space/none alias Spacing:space/none */
+  --space-none: var(--raw-spacing-space-none);
+  /* Dimensions space/2xs alias Spacing:space/3xs */
+  --space-2xs: var(--space-3xs);
+  /* Dimensions space/xs alias Spacing:space/xs */
+  --space-xs: var(--raw-spacing-space-xs);
+  /* Dimensions space/s alias Spacing:space/s */
+  --space-s: var(--raw-spacing-space-s);
+  /* Dimensions space/m alias Spacing:space/m */
+  --space-m: var(--raw-spacing-space-m);
+  /* Dimensions space/l alias Spacing:space/xl */
+  --space-l: var(--raw-spacing-space-xl);
+  /* Dimensions space/xl alias Spacing:space/2xl */
+  --space-xl: var(--raw-spacing-space-2xl);
+  /* Dimensions space/2xl alias Spacing:space/4xl */
+  --space-2xl: var(--space-4xl);
+  /* Dimensions space/3xl alias Spacing:space/6xl */
+  --space-3xl: var(--space-6xl);
+  /* Dimensions radius/none alias Radius:radius/none */
+  --radius-none: var(--raw-radius-radius-none);
+  /* Dimensions radius/s alias Radius:radius/m */
+  --radius-s: var(--raw-radius-radius-m);
+  /* Dimensions radius/m alias Radius:radius/l */
+  --radius-m: var(--raw-radius-radius-l);
+  /* Dimensions radius/l alias Radius:radius/xl */
+  --radius-l: var(--radius-xl);
+  /* Dimensions radius/full alias Radius:radius/full */
+  --radius-full: var(--raw-radius-radius-full);
+  /* Dimensions border-width/default alias Border width:border-width/s */
+  --border-width-default: var(--border-width-s);
+  /* Dimensions border-width/strong alias Border width:border-width/l */
+  --border-width-strong: var(--border-width-l);
+  /* Dimensions blur/s alias Blur:blur/s */
+  --blur-s: var(--raw-blur-blur-s);
+  /* Dimensions blur/m alias Blur:blur/m */
+  --blur-m: var(--raw-blur-blur-m);
+  /* Dimensions blur/l alias Blur:blur/xl */
+  --blur-l: var(--blur-xl);
+  /* Dimensions opacity/disabled alias Opacity:opacity/40 */
+  --opacity-disabled: var(--opacity-40);
+  /* Dimensions opacity/scrim alias Opacity:opacity/60 */
+  --opacity-scrim: var(--opacity-60);
+  /* Dimensions icon/s alias Icon size:icon/s */
+  --icon-s: var(--raw-icon-size-icon-s);
+  /* Dimensions icon/m alias Icon size:icon/m */
+  --icon-m: var(--raw-icon-size-icon-m);
+  /* Dimensions icon/l alias Icon size:icon/l */
+  --icon-l: var(--raw-icon-size-icon-l);
+  /* Dimensions icon/xl alias Icon size:icon/xl */
+  --icon-xl: var(--raw-icon-size-icon-xl);
+  /* Dimensions layout/mobile alias Grid:grid/breakpoint/mobile */
+  --layout-mobile: var(--grid-breakpoint-mobile);
+  /* Dimensions layout/tablet alias Grid:grid/breakpoint/tablet */
+  --layout-tablet: var(--grid-breakpoint-tablet);
+  /* Dimensions layout/desktop alias Grid:grid/breakpoint/desktop */
+  --layout-desktop: var(--grid-breakpoint-desktop);
+  /* Dimensions layout/max-content alias Grid:grid/max-content/desktop */
+  --layout-max-content: var(--grid-max-content-desktop);
+
+  /* Semantic */
+  /* Semantic surface/primary alias Colour:base/white */
+  --surface-primary: var(--base-white);
+  /* Semantic surface/secondary alias Colour:neutral/100 */
+  --surface-secondary: var(--neutral-100);
+  /* Semantic surface/tertiary alias Colour:neutral/200 */
+  --surface-tertiary: var(--neutral-200);
+  /* Semantic surface/inverse alias Colour:neutral/900 */
+  --surface-inverse: var(--neutral-900);
+  /* Semantic overlay/scrim alias Colour:neutral/1000 */
+  --overlay-scrim: var(--neutral-1000);
+  /* Semantic text/primary alias Colour:neutral/1000 */
+  --text-primary: var(--neutral-1000);
+  /* Semantic text/secondary alias Colour:neutral/800 */
+  --text-secondary: var(--neutral-800);
+  /* Semantic text/tertiary alias Colour:neutral/700 */
+  --text-tertiary: var(--neutral-700);
+  /* Semantic text/disabled alias Colour:neutral/400 */
+  --text-disabled: var(--neutral-400);
+  /* Semantic text/inverse alias Colour:neutral/50 */
+  --text-inverse: var(--neutral-50);
+  /* Semantic border/strong alias Colour:neutral/300 */
+  --border-strong: var(--neutral-300);
+  /* Semantic border/default alias Colour:neutral/200 */
+  --border-default: var(--neutral-200);
+  /* Semantic border/subtle alias Colour:neutral/100 */
+  --border-subtle: var(--neutral-100);
+  /* Semantic colour/red/solid alias Colour:red/500 */
+  --colour-red-solid: var(--red-500);
+  /* Semantic colour/red/tint alias Colour:red/100 */
+  --colour-red-tint: var(--red-100);
+  /* Semantic colour/red/text alias Colour:red/800 */
+  --colour-red-text: var(--red-800);
+  /* Semantic colour/red/on alias Colour:red/950 */
+  --colour-red-on: var(--red-950);
+  /* Semantic colour/orange/solid alias Colour:orange/500 */
+  --colour-orange-solid: var(--orange-500);
+  /* Semantic colour/orange/tint alias Colour:orange/100 */
+  --colour-orange-tint: var(--orange-100);
+  /* Semantic colour/orange/text alias Colour:orange/800 */
+  --colour-orange-text: var(--orange-800);
+  /* Semantic colour/orange/on alias Colour:orange/900 */
+  --colour-orange-on: var(--orange-900);
+  /* Semantic colour/yellow/solid alias Colour:yellow/500 */
+  --colour-yellow-solid: var(--yellow-500);
+  /* Semantic colour/yellow/tint alias Colour:yellow/100 */
+  --colour-yellow-tint: var(--yellow-100);
+  /* Semantic colour/yellow/text alias Colour:yellow/900 */
+  --colour-yellow-text: var(--yellow-900);
+  /* Semantic colour/yellow/on alias Colour:yellow/900 */
+  --colour-yellow-on: var(--yellow-900);
+  /* Semantic colour/green/solid alias Colour:green/500 */
+  --colour-green-solid: var(--green-500);
+  /* Semantic colour/green/tint alias Colour:green/100 */
+  --colour-green-tint: var(--green-100);
+  /* Semantic colour/green/text alias Colour:green/900 */
+  --colour-green-text: var(--green-900);
+  /* Semantic colour/green/on alias Colour:green/900 */
+  --colour-green-on: var(--green-900);
+  /* Semantic colour/blue/solid alias Colour:blue/500 */
+  --colour-blue-solid: var(--blue-500);
+  /* Semantic colour/blue/tint alias Colour:blue/100 */
+  --colour-blue-tint: var(--blue-100);
+  /* Semantic colour/blue/text alias Colour:blue/800 */
+  --colour-blue-text: var(--blue-800);
+  /* Semantic colour/blue/on alias Colour:blue/950 */
+  --colour-blue-on: var(--blue-950);
+  /* Semantic colour/purple/solid alias Colour:purple/500 */
+  --colour-purple-solid: var(--purple-500);
+  /* Semantic colour/purple/tint alias Colour:purple/100 */
+  --colour-purple-tint: var(--purple-100);
+  /* Semantic colour/purple/text alias Colour:purple/700 */
+  --colour-purple-text: var(--purple-700);
+  /* Semantic colour/purple/on alias Colour:purple/950 */
+  --colour-purple-on: var(--purple-950);
+  /* Semantic colour/pink/solid alias Colour:pink/500 */
+  --colour-pink-solid: var(--pink-500);
+  /* Semantic colour/pink/tint alias Colour:pink/100 */
+  --colour-pink-tint: var(--pink-100);
+  /* Semantic colour/pink/text alias Colour:pink/800 */
+  --colour-pink-text: var(--pink-800);
+  /* Semantic colour/pink/on alias Colour:pink/950 */
+  --colour-pink-on: var(--pink-950);
+  /* Semantic accent/default alias Colour:blue/500 */
+  --accent-default: var(--blue-500);
+}
+
+/* Colour collection, Dark mode. Inverted scale used by style-sheet
+   frames only. Do not set data-palette on the same element as
+   data-theme: semantic tokens alias the Light-scale primitives. */
+[data-palette="style-sheet"] {
+  /* Colour neutral/50 hidden */
+  --neutral-50: #0F0F0F;
+  /* Colour neutral/100 hidden */
+  --neutral-100: #232323;
+  /* Colour neutral/200 hidden */
+  --neutral-200: #383838;
+  /* Colour neutral/300 hidden */
+  --neutral-300: #4F4F4F;
+  /* Colour neutral/400 hidden */
+  --neutral-400: #666666;
+  /* Colour neutral/500 hidden */
+  --neutral-500: #999999;
+  /* Colour neutral/600 hidden */
+  --neutral-600: #7F7F7F;
+  /* Colour neutral/700 hidden */
+  --neutral-700: #ABABAB;
+  /* Colour neutral/800 hidden */
+  --neutral-800: #BDBDBD;
+  /* Colour neutral/900 hidden */
+  --neutral-900: #D0D0D0;
+  /* Colour neutral/950 hidden */
+  --neutral-950: #E3E3E3;
+  /* Colour neutral/1000 hidden */
+  --neutral-1000: #F7F7F7;
+  /* Colour red/50 hidden */
+  --red-50: #320003;
+  /* Colour red/100 hidden */
+  --red-100: #56000A;
+  /* Colour red/200 hidden */
+  --red-200: #7D0013;
+  /* Colour red/300 hidden */
+  --red-300: #A6001D;
+  /* Colour red/400 hidden */
+  --red-400: #C62C34;
+  /* Colour red/500 hidden */
+  --red-500: #FF6E6B;
+  /* Colour red/600 hidden */
+  --red-600: #E34E4F;
+  /* Colour red/700 hidden */
+  --red-700: #FF8E88;
+  /* Colour red/800 hidden */
+  --red-800: #FFAAA4;
+  /* Colour red/900 hidden */
+  --red-900: #FFC4BF;
+  /* Colour red/950 hidden */
+  --red-950: #FFDCD9;
+  /* Colour red/1000 hidden */
+  --red-1000: #FFF4F3;
+  /* Colour orange/50 hidden */
+  --orange-50: #2B0A00;
+  /* Colour orange/100 hidden */
+  --orange-100: #4D1A00;
+  /* Colour orange/200 hidden */
+  --orange-200: #732B00;
+  /* Colour orange/300 hidden */
+  --orange-300: #9A3C00;
+  /* Colour orange/400 hidden */
+  --orange-400: #C2510D;
+  /* Colour orange/500 hidden */
+  --orange-500: #FF8F5C;
+  /* Colour orange/600 hidden */
+  --orange-600: #E17039;
+  /* Colour orange/700 hidden */
+  --orange-700: #FFA67E;
+  /* Colour orange/800 hidden */
+  --orange-800: #FFBA9D;
+  /* Colour orange/900 hidden */
+  --orange-900: #FFCEBA;
+  /* Colour orange/950 hidden */
+  --orange-950: #FFE2D5;
+  /* Colour orange/1000 hidden */
+  --orange-1000: #FFF4F0;
+  /* Colour yellow/50 hidden */
+  --yellow-50: #1A1600;
+  /* Colour yellow/100 hidden */
+  --yellow-100: #3B3300;
+  /* Colour yellow/200 hidden */
+  --yellow-200: #5F5400;
+  /* Colour yellow/300 hidden */
+  --yellow-300: #857600;
+  /* Colour yellow/400 hidden */
+  --yellow-400: #AE9B00;
+  /* Colour yellow/500 hidden */
+  --yellow-500: #FFE95C;
+  /* Colour yellow/600 hidden */
+  --yellow-600: #D8C112;
+  /* Colour yellow/700 hidden */
+  --yellow-700: #FFEC77;
+  /* Colour yellow/800 hidden */
+  --yellow-800: #FFF08F;
+  /* Colour yellow/900 hidden */
+  --yellow-900: #FFF3A5;
+  /* Colour yellow/950 hidden */
+  --yellow-950: #FFF6BB;
+  /* Colour yellow/1000 hidden */
+  --yellow-1000: #FCF8DA;
+  /* Colour green/50 hidden */
+  --green-50: #001D07;
+  /* Colour green/100 hidden */
+  --green-100: #003D16;
+  /* Colour green/200 hidden */
+  --green-200: #006127;
+  /* Colour green/300 hidden */
+  --green-300: #00883A;
+  /* Colour green/400 hidden */
+  --green-400: #00B14D;
+  /* Colour green/500 hidden */
+  --green-500: #6BFF91;
+  /* Colour green/600 hidden */
+  --green-600: #2FD969;
+  /* Colour green/700 hidden */
+  --green-700: #8DFFA5;
+  /* Colour green/800 hidden */
+  --green-800: #A7FFB8;
+  /* Colour green/900 hidden */
+  --green-900: #BEFFC9;
+  /* Colour green/950 hidden */
+  --green-950: #D2FFD9;
+  /* Colour green/1000 hidden */
+  --green-1000: #E5FFE8;
+  /* Colour blue/50 hidden */
+  --blue-50: #001533;
+  /* Colour blue/100 hidden */
+  --blue-100: #002957;
+  /* Colour blue/200 hidden */
+  --blue-200: #003F7E;
+  /* Colour blue/300 hidden */
+  --blue-300: #0055A8;
+  /* Colour blue/400 hidden */
+  --blue-400: #1B6FCA;
+  /* Colour blue/500 hidden */
+  --blue-500: #5CA5FF;
+  /* Colour blue/600 hidden */
+  --blue-600: #3D8AE5;
+  /* Colour blue/700 hidden */
+  --blue-700: #7DB6FF;
+  /* Colour blue/800 hidden */
+  --blue-800: #9BC7FF;
+  /* Colour blue/900 hidden */
+  --blue-900: #B8D7FF;
+  /* Colour blue/950 hidden */
+  --blue-950: #D5E7FF;
+  /* Colour blue/1000 hidden */
+  --blue-1000: #F1F7FF;
+  /* Colour purple/50 hidden */
+  --purple-50: #20003D;
+  /* Colour purple/100 hidden */
+  --purple-100: #370063;
+  /* Colour purple/200 hidden */
+  --purple-200: #4F008C;
+  /* Colour purple/300 hidden */
+  --purple-300: #6904B6;
+  /* Colour purple/400 hidden */
+  --purple-400: #7F30D0;
+  /* Colour purple/500 hidden */
+  --purple-500: #AB6BFF;
+  /* Colour purple/600 hidden */
+  --purple-600: #954FE8;
+  /* Colour purple/700 hidden */
+  --purple-700: #B98AFF;
+  /* Colour purple/800 hidden */
+  --purple-800: #C8A7FF;
+  /* Colour purple/900 hidden */
+  --purple-900: #D7C1FF;
+  /* Colour purple/950 hidden */
+  --purple-950: #E7DBFF;
+  /* Colour purple/1000 hidden */
+  --purple-1000: #F8F5FF;
+  /* Colour pink/50 hidden */
+  --pink-50: #2F001B;
+  /* Colour pink/100 hidden */
+  --pink-100: #520033;
+  /* Colour pink/200 hidden */
+  --pink-200: #78004D;
+  /* Colour pink/300 hidden */
+  --pink-300: #A10069;
+  /* Colour pink/400 hidden */
+  --pink-400: #C42384;
+  /* Colour pink/500 hidden */
+  --pink-500: #FF6BBA;
+  /* Colour pink/600 hidden */
+  --pink-600: #E2499F;
+  /* Colour pink/700 hidden */
+  --pink-700: #FF8CC6;
+  /* Colour pink/800 hidden */
+  --pink-800: #FFA9D2;
+  /* Colour pink/900 hidden */
+  --pink-900: #FFC3DE;
+  /* Colour pink/950 hidden */
+  --pink-950: #FFDBEB;
+  /* Colour pink/1000 hidden */
+  --pink-1000: #FFF3F8;
+  /* Colour base/white hidden */
+  --base-white: #FFFFFF;
+  /* Colour base/black hidden */
+  --base-black: #000000;
+}
+
+[data-theme="dark"] {
+  /* Semantic surface/primary alias Colour:base/black */
+  --surface-primary: var(--base-black);
+  /* Semantic surface/secondary alias Colour:neutral/950 */
+  --surface-secondary: var(--neutral-950);
+  /* Semantic surface/tertiary alias Colour:neutral/900 */
+  --surface-tertiary: var(--neutral-900);
+  /* Semantic surface/inverse alias Colour:neutral/100 */
+  --surface-inverse: var(--neutral-100);
+  /* Semantic overlay/scrim alias Colour:neutral/1000 */
+  --overlay-scrim: var(--neutral-1000);
+  /* Semantic text/primary alias Colour:neutral/50 */
+  --text-primary: var(--neutral-50);
+  /* Semantic text/secondary alias Colour:neutral/200 */
+  --text-secondary: var(--neutral-200);
+  /* Semantic text/tertiary alias Colour:neutral/400 */
+  --text-tertiary: var(--neutral-400);
+  /* Semantic text/disabled alias Colour:neutral/600 */
+  --text-disabled: var(--neutral-600);
+  /* Semantic text/inverse alias Colour:neutral/1000 */
+  --text-inverse: var(--neutral-1000);
+  /* Semantic border/strong alias Colour:neutral/800 */
+  --border-strong: var(--neutral-800);
+  /* Semantic border/default alias Colour:neutral/900 */
+  --border-default: var(--neutral-900);
+  /* Semantic border/subtle alias Colour:neutral/950 */
+  --border-subtle: var(--neutral-950);
+  /* Semantic colour/red/solid alias Colour:red/500 */
+  --colour-red-solid: var(--red-500);
+  /* Semantic colour/red/tint alias Colour:red/900 */
+  --colour-red-tint: var(--red-900);
+  /* Semantic colour/red/text alias Colour:red/300 */
+  --colour-red-text: var(--red-300);
+  /* Semantic colour/red/on alias Colour:red/950 */
+  --colour-red-on: var(--red-950);
+  /* Semantic colour/orange/solid alias Colour:orange/500 */
+  --colour-orange-solid: var(--orange-500);
+  /* Semantic colour/orange/tint alias Colour:orange/900 */
+  --colour-orange-tint: var(--orange-900);
+  /* Semantic colour/orange/text alias Colour:orange/300 */
+  --colour-orange-text: var(--orange-300);
+  /* Semantic colour/orange/on alias Colour:orange/900 */
+  --colour-orange-on: var(--orange-900);
+  /* Semantic colour/yellow/solid alias Colour:yellow/500 */
+  --colour-yellow-solid: var(--yellow-500);
+  /* Semantic colour/yellow/tint alias Colour:yellow/900 */
+  --colour-yellow-tint: var(--yellow-900);
+  /* Semantic colour/yellow/text alias Colour:yellow/300 */
+  --colour-yellow-text: var(--yellow-300);
+  /* Semantic colour/yellow/on alias Colour:yellow/900 */
+  --colour-yellow-on: var(--yellow-900);
+  /* Semantic colour/green/solid alias Colour:green/500 */
+  --colour-green-solid: var(--green-500);
+  /* Semantic colour/green/tint alias Colour:green/900 */
+  --colour-green-tint: var(--green-900);
+  /* Semantic colour/green/text alias Colour:green/300 */
+  --colour-green-text: var(--green-300);
+  /* Semantic colour/green/on alias Colour:green/900 */
+  --colour-green-on: var(--green-900);
+  /* Semantic colour/blue/solid alias Colour:blue/500 */
+  --colour-blue-solid: var(--blue-500);
+  /* Semantic colour/blue/tint alias Colour:blue/900 */
+  --colour-blue-tint: var(--blue-900);
+  /* Semantic colour/blue/text alias Colour:blue/300 */
+  --colour-blue-text: var(--blue-300);
+  /* Semantic colour/blue/on alias Colour:blue/950 */
+  --colour-blue-on: var(--blue-950);
+  /* Semantic colour/purple/solid alias Colour:purple/500 */
+  --colour-purple-solid: var(--purple-500);
+  /* Semantic colour/purple/tint alias Colour:purple/900 */
+  --colour-purple-tint: var(--purple-900);
+  /* Semantic colour/purple/text alias Colour:purple/300 */
+  --colour-purple-text: var(--purple-300);
+  /* Semantic colour/purple/on alias Colour:purple/950 */
+  --colour-purple-on: var(--purple-950);
+  /* Semantic colour/pink/solid alias Colour:pink/500 */
+  --colour-pink-solid: var(--pink-500);
+  /* Semantic colour/pink/tint alias Colour:pink/900 */
+  --colour-pink-tint: var(--pink-900);
+  /* Semantic colour/pink/text alias Colour:pink/300 */
+  --colour-pink-text: var(--pink-300);
+  /* Semantic colour/pink/on alias Colour:pink/950 */
+  --colour-pink-on: var(--pink-950);
+  /* Semantic accent/default alias Colour:blue/500 */
+  --accent-default: var(--blue-500);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* Semantic surface/primary alias Colour:base/black */
+    --surface-primary: var(--base-black);
+    /* Semantic surface/secondary alias Colour:neutral/950 */
+    --surface-secondary: var(--neutral-950);
+    /* Semantic surface/tertiary alias Colour:neutral/900 */
+    --surface-tertiary: var(--neutral-900);
+    /* Semantic surface/inverse alias Colour:neutral/100 */
+    --surface-inverse: var(--neutral-100);
+    /* Semantic overlay/scrim alias Colour:neutral/1000 */
+    --overlay-scrim: var(--neutral-1000);
+    /* Semantic text/primary alias Colour:neutral/50 */
+    --text-primary: var(--neutral-50);
+    /* Semantic text/secondary alias Colour:neutral/200 */
+    --text-secondary: var(--neutral-200);
+    /* Semantic text/tertiary alias Colour:neutral/400 */
+    --text-tertiary: var(--neutral-400);
+    /* Semantic text/disabled alias Colour:neutral/600 */
+    --text-disabled: var(--neutral-600);
+    /* Semantic text/inverse alias Colour:neutral/1000 */
+    --text-inverse: var(--neutral-1000);
+    /* Semantic border/strong alias Colour:neutral/800 */
+    --border-strong: var(--neutral-800);
+    /* Semantic border/default alias Colour:neutral/900 */
+    --border-default: var(--neutral-900);
+    /* Semantic border/subtle alias Colour:neutral/950 */
+    --border-subtle: var(--neutral-950);
+    /* Semantic colour/red/solid alias Colour:red/500 */
+    --colour-red-solid: var(--red-500);
+    /* Semantic colour/red/tint alias Colour:red/900 */
+    --colour-red-tint: var(--red-900);
+    /* Semantic colour/red/text alias Colour:red/300 */
+    --colour-red-text: var(--red-300);
+    /* Semantic colour/red/on alias Colour:red/950 */
+    --colour-red-on: var(--red-950);
+    /* Semantic colour/orange/solid alias Colour:orange/500 */
+    --colour-orange-solid: var(--orange-500);
+    /* Semantic colour/orange/tint alias Colour:orange/900 */
+    --colour-orange-tint: var(--orange-900);
+    /* Semantic colour/orange/text alias Colour:orange/300 */
+    --colour-orange-text: var(--orange-300);
+    /* Semantic colour/orange/on alias Colour:orange/900 */
+    --colour-orange-on: var(--orange-900);
+    /* Semantic colour/yellow/solid alias Colour:yellow/500 */
+    --colour-yellow-solid: var(--yellow-500);
+    /* Semantic colour/yellow/tint alias Colour:yellow/900 */
+    --colour-yellow-tint: var(--yellow-900);
+    /* Semantic colour/yellow/text alias Colour:yellow/300 */
+    --colour-yellow-text: var(--yellow-300);
+    /* Semantic colour/yellow/on alias Colour:yellow/900 */
+    --colour-yellow-on: var(--yellow-900);
+    /* Semantic colour/green/solid alias Colour:green/500 */
+    --colour-green-solid: var(--green-500);
+    /* Semantic colour/green/tint alias Colour:green/900 */
+    --colour-green-tint: var(--green-900);
+    /* Semantic colour/green/text alias Colour:green/300 */
+    --colour-green-text: var(--green-300);
+    /* Semantic colour/green/on alias Colour:green/900 */
+    --colour-green-on: var(--green-900);
+    /* Semantic colour/blue/solid alias Colour:blue/500 */
+    --colour-blue-solid: var(--blue-500);
+    /* Semantic colour/blue/tint alias Colour:blue/900 */
+    --colour-blue-tint: var(--blue-900);
+    /* Semantic colour/blue/text alias Colour:blue/300 */
+    --colour-blue-text: var(--blue-300);
+    /* Semantic colour/blue/on alias Colour:blue/950 */
+    --colour-blue-on: var(--blue-950);
+    /* Semantic colour/purple/solid alias Colour:purple/500 */
+    --colour-purple-solid: var(--purple-500);
+    /* Semantic colour/purple/tint alias Colour:purple/900 */
+    --colour-purple-tint: var(--purple-900);
+    /* Semantic colour/purple/text alias Colour:purple/300 */
+    --colour-purple-text: var(--purple-300);
+    /* Semantic colour/purple/on alias Colour:purple/950 */
+    --colour-purple-on: var(--purple-950);
+    /* Semantic colour/pink/solid alias Colour:pink/500 */
+    --colour-pink-solid: var(--pink-500);
+    /* Semantic colour/pink/tint alias Colour:pink/900 */
+    --colour-pink-tint: var(--pink-900);
+    /* Semantic colour/pink/text alias Colour:pink/300 */
+    --colour-pink-text: var(--pink-300);
+    /* Semantic colour/pink/on alias Colour:pink/950 */
+    --colour-pink-on: var(--pink-950);
+    /* Semantic accent/default alias Colour:blue/500 */
+    --accent-default: var(--blue-500);
+  }
+}
