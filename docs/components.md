@@ -1,6 +1,12 @@
 # Components
 
-Tag and Progressive Blur are CSS classes in `design-system/css/components.css`. Colour, spacing, radius, icon size, and blur radius come from Semantic and Dimensions tokens. Strokes, frame sizes, and fade hexes come from the component spec.
+Tag and Progressive Blur are CSS classes in `design-system/css/components.css`. The Next.js app wraps those classes in `components/Tag.tsx` and `components/ProgressiveBlur.tsx`. Colour, spacing, radius, icon size, and blur radius come from Semantic and Dimensions tokens. Strokes, frame sizes, and fade hexes come from the component spec.
+
+```tsx
+<Tag size="m" colour="green" label="Success" icon="check" />
+<ProgressiveBlur edge="top" intensity="soft" mode="light" />
+<ThumbnailBlur intensity="strong" mode="dark" />
+```
 
 ## Tag
 

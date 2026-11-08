@@ -2,14 +2,25 @@
   "name": "website-27",
   "version": "0.1.0",
   "private": true,
-  "description": "Portfolio for Madebysatyam-27. Plain CSS design system taken from the Figma variables, text styles, and components.",
+  "description": "Portfolio for Madebysatyam-27. Next.js shell over the Figma design system CSS.",
   "scripts": {
-    "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory design-system",
-    "build": "python3 design-system/scripts/build.py",
+    "dev": "next dev",
+    "build": "python3 design-system/scripts/verify-tokens.py && next build",
     "verify-tokens": "python3 design-system/scripts/verify-tokens.py",
     "generate-tokens": "python3 design-system/scripts/generate-tokens.py"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "next": "^16.4.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
   }
 }
