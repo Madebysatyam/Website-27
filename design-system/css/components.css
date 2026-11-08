@@ -1,0 +1,434 @@
+/* Tag and Progressive Blur.
+   Colour, spacing, radius, icon size, and blur radius use Semantic and
+   Dimensions tokens only. Fade hexes, frame sizes, and icon strokes are
+   the component spec, not tokens. */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+  border: 0;
+  box-shadow: none;
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+  --tag-duo: var(--surface-tertiary);
+  vertical-align: middle;
+}
+
+.tag--s {
+  padding: var(--space-2xs) var(--space-xs);
+  gap: var(--space-2xs);
+  border-radius: var(--radius-s);
+}
+
+.tag--m {
+  padding: var(--space-2xs) var(--space-s);
+  gap: var(--space-2xs);
+  border-radius: var(--radius-m);
+}
+
+.tag--l {
+  padding: var(--space-s) var(--space-m);
+  gap: var(--space-xs);
+  border-radius: var(--radius-l);
+}
+
+.tag--neutral {
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+  --tag-duo: var(--surface-tertiary);
+}
+
+.tag--red {
+  background: var(--colour-red-tint);
+  color: var(--colour-red-text);
+  --tag-duo: var(--colour-red-solid);
+}
+
+.tag--orange {
+  background: var(--colour-orange-tint);
+  color: var(--colour-orange-text);
+  --tag-duo: var(--colour-orange-solid);
+}
+
+.tag--yellow {
+  background: var(--colour-yellow-tint);
+  color: var(--colour-yellow-text);
+  --tag-duo: var(--colour-yellow-solid);
+}
+
+.tag--green {
+  background: var(--colour-green-tint);
+  color: var(--colour-green-text);
+  --tag-duo: var(--colour-green-solid);
+}
+
+.tag--blue {
+  background: var(--colour-blue-tint);
+  color: var(--colour-blue-text);
+  --tag-duo: var(--colour-blue-solid);
+}
+
+.tag--purple {
+  background: var(--colour-purple-tint);
+  color: var(--colour-purple-text);
+  --tag-duo: var(--colour-purple-solid);
+}
+
+.tag--pink {
+  background: var(--colour-pink-tint);
+  color: var(--colour-pink-text);
+  --tag-duo: var(--colour-pink-solid);
+}
+
+.tag__label {
+  white-space: nowrap;
+}
+
+.tag__icon {
+  display: block;
+  flex: none;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tag--s .tag__icon {
+  width: var(--icon-s);
+  height: var(--icon-s);
+  stroke-width: 1.5;
+}
+
+.tag--m .tag__icon {
+  width: var(--icon-m);
+  height: var(--icon-m);
+  stroke-width: 1.75;
+}
+
+.tag--l .tag__icon {
+  width: var(--icon-xl);
+  height: var(--icon-xl);
+  stroke-width: 2;
+}
+
+.tag--no-icon .tag__icon {
+  display: none;
+}
+
+.tag__icon use {
+  stroke: inherit;
+  fill: inherit;
+  stroke-width: inherit;
+  stroke-linecap: inherit;
+  stroke-linejoin: inherit;
+}
+
+/* Progressive blur frames. Soft max is blur/m (16). Strong max is blur/l (40).
+   CSS has no native progressive blur, so four masked backdrop layers ramp
+   from 0 to that radius. Fade colours are literal, not tokens:
+   Light #F7F7F7, Dark #0F0F0F. Alpha 0x99 = 60%, 0xD9 = 85%. */
+.progressive-blur {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+  width: var(--layout-mobile);
+  --progressive-blur: var(--blur-m);
+}
+
+.progressive-blur--soft {
+  --progressive-blur: var(--blur-m);
+}
+
+.progressive-blur--strong {
+  --progressive-blur: var(--blur-l);
+}
+
+.progressive-blur--top.progressive-blur--soft { height: 96px; }
+.progressive-blur--top.progressive-blur--strong { height: 160px; }
+.progressive-blur--bottom.progressive-blur--soft { height: 120px; }
+.progressive-blur--bottom.progressive-blur--strong { height: 200px; }
+
+.progressive-blur__layer,
+.progressive-blur__fade {
+  position: absolute;
+  inset: 0;
+}
+
+.progressive-blur--top .progressive-blur__layer:nth-child(1) {
+  -webkit-backdrop-filter: blur(calc(var(--progressive-blur) * 0.25));
+  backdrop-filter: blur(calc(var(--progressive-blur) * 0.25));
+  mask-image: linear-gradient(to bottom, #000 0%, #000 35%, transparent 100%);
+}
+
+.progressive-blur--top .progressive-blur__layer:nth-child(2) {
+  -webkit-backdrop-filter: blur(calc(var(--progressive-blur) * 0.5));
+  backdrop-filter: blur(calc(var(--progressive-blur) * 0.5));
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 72%);
+}
+
+.progressive-blur--top .progressive-blur__layer:nth-child(3) {
+  -webkit-backdrop-filter: blur(calc(var(--progressive-blur) * 0.75));
+  backdrop-filter: blur(calc(var(--progressive-blur) * 0.75));
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 48%);
+}
+
+.progressive-blur--top .progressive-blur__layer:nth-child(4) {
+  -webkit-backdrop-filter: blur(var(--progressive-blur));
+  backdrop-filter: blur(var(--progressive-blur));
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 26%);
+}
+
+.progressive-blur--bottom .progressive-blur__layer:nth-child(1) {
+  -webkit-backdrop-filter: blur(calc(var(--progressive-blur) * 0.25));
+  backdrop-filter: blur(calc(var(--progressive-blur) * 0.25));
+  mask-image: linear-gradient(to top, #000 0%, #000 35%, transparent 100%);
+}
+
+.progressive-blur--bottom .progressive-blur__layer:nth-child(2) {
+  -webkit-backdrop-filter: blur(calc(var(--progressive-blur) * 0.5));
+  backdrop-filter: blur(calc(var(--progressive-blur) * 0.5));
+  mask-image: linear-gradient(to top, #000 0%, transparent 72%);
+}
+
+.progressive-blur--bottom .progressive-blur__layer:nth-child(3) {
+  -webkit-backdrop-filter: blur(calc(var(--progressive-blur) * 0.75));
+  backdrop-filter: blur(calc(var(--progressive-blur) * 0.75));
+  mask-image: linear-gradient(to top, #000 0%, transparent 48%);
+}
+
+.progressive-blur--bottom .progressive-blur__layer:nth-child(4) {
+  -webkit-backdrop-filter: blur(var(--progressive-blur));
+  backdrop-filter: blur(var(--progressive-blur));
+  mask-image: linear-gradient(to top, #000 0%, transparent 26%);
+}
+
+.progressive-blur--top.progressive-blur--soft .progressive-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F799 0%, #F7F7F700 100%);
+}
+
+.progressive-blur--top.progressive-blur--strong .progressive-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F7D9 0%, #F7F7F700 100%);
+}
+
+.progressive-blur--bottom.progressive-blur--soft .progressive-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F700 0%, #F7F7F799 100%);
+}
+
+.progressive-blur--bottom.progressive-blur--strong .progressive-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F700 0%, #F7F7F7D9 100%);
+}
+
+.progressive-blur--dark.progressive-blur--top.progressive-blur--soft .progressive-blur__fade,
+[data-theme="dark"] .progressive-blur--top.progressive-blur--soft:not(.progressive-blur--light) .progressive-blur__fade {
+  background: linear-gradient(to bottom, #0F0F0F99 0%, #0F0F0F00 100%);
+}
+
+.progressive-blur--dark.progressive-blur--top.progressive-blur--strong .progressive-blur__fade,
+[data-theme="dark"] .progressive-blur--top.progressive-blur--strong:not(.progressive-blur--light) .progressive-blur__fade {
+  background: linear-gradient(to bottom, #0F0F0FD9 0%, #0F0F0F00 100%);
+}
+
+.progressive-blur--dark.progressive-blur--bottom.progressive-blur--soft .progressive-blur__fade,
+[data-theme="dark"] .progressive-blur--bottom.progressive-blur--soft:not(.progressive-blur--light) .progressive-blur__fade {
+  background: linear-gradient(to bottom, #0F0F0F00 0%, #0F0F0F99 100%);
+}
+
+.progressive-blur--dark.progressive-blur--bottom.progressive-blur--strong .progressive-blur__fade,
+[data-theme="dark"] .progressive-blur--bottom.progressive-blur--strong:not(.progressive-blur--light) .progressive-blur__fade {
+  background: linear-gradient(to bottom, #0F0F0F00 0%, #0F0F0FD9 100%);
+}
+
+.progressive-blur--light.progressive-blur--top.progressive-blur--soft .progressive-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F799 0%, #F7F7F700 100%);
+}
+
+.progressive-blur--light.progressive-blur--top.progressive-blur--strong .progressive-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F7D9 0%, #F7F7F700 100%);
+}
+
+.progressive-blur--light.progressive-blur--bottom.progressive-blur--soft .progressive-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F700 0%, #F7F7F799 100%);
+}
+
+.progressive-blur--light.progressive-blur--bottom.progressive-blur--strong .progressive-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F700 0%, #F7F7F7D9 100%);
+}
+
+/* Thumbnail. 320×400, radius 12 (radius/m). Layer blur 0→16 from 75% (soft)
+   or 60% (strong) to the bottom. Fade is a separate rectangle. */
+.thumbnail-blur {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  background: #F7F7F7;
+}
+
+.thumbnail-blur__sharp,
+.thumbnail-blur__blur {
+  position: absolute;
+  inset: 0;
+}
+
+.thumbnail-blur__art {
+  position: absolute;
+  inset: 0;
+}
+
+.thumbnail-blur__rows {
+  position: absolute;
+  left: var(--space-m);
+  right: var(--space-m);
+  top: 168px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #111827;
+}
+
+.thumbnail-blur__rows li + li {
+  margin-top: 6px;
+}
+
+.thumbnail-blur--soft .thumbnail-blur__sharp {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
+}
+
+.thumbnail-blur--soft .thumbnail-blur__blur {
+  filter: blur(var(--blur-m));
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 75%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 75%, #000 100%);
+}
+
+.thumbnail-blur--strong .thumbnail-blur__sharp {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+}
+
+.thumbnail-blur--strong .thumbnail-blur__blur {
+  filter: blur(var(--blur-m));
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 60%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 60%, #000 100%);
+}
+
+.thumbnail-blur__fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.thumbnail-blur--soft .thumbnail-blur__fade {
+  height: 100px;
+  background: linear-gradient(to bottom, #F7F7F700 0%, #F7F7F799 100%);
+}
+
+.thumbnail-blur--strong .thumbnail-blur__fade {
+  height: 160px;
+  background: linear-gradient(to bottom, #F7F7F700 0%, #F7F7F7D9 100%);
+}
+
+.thumbnail-blur__caption {
+  position: absolute;
+  z-index: 2;
+  left: var(--space-m);
+  bottom: var(--space-m);
+  margin: 0;
+  color: #111827;
+}
+
+.thumbnail-blur--dark,
+[data-theme="dark"] .thumbnail-blur:not(.thumbnail-blur--light) {
+  background: #0F0F0F;
+}
+
+.thumbnail-blur--dark.thumbnail-blur--soft .thumbnail-blur__fade,
+[data-theme="dark"] .thumbnail-blur--soft:not(.thumbnail-blur--light) .thumbnail-blur__fade {
+  background: linear-gradient(to bottom, #0F0F0F00 0%, #0F0F0F99 100%);
+}
+
+.thumbnail-blur--dark.thumbnail-blur--strong .thumbnail-blur__fade,
+[data-theme="dark"] .thumbnail-blur--strong:not(.thumbnail-blur--light) .thumbnail-blur__fade {
+  background: linear-gradient(to bottom, #0F0F0F00 0%, #0F0F0FD9 100%);
+}
+
+.thumbnail-blur--dark .thumbnail-blur__caption,
+[data-theme="dark"] .thumbnail-blur:not(.thumbnail-blur--light) .thumbnail-blur__caption {
+  color: #FFFFFF;
+}
+
+.thumbnail-blur--light {
+  background: #F7F7F7;
+}
+
+.thumbnail-blur--light .thumbnail-blur__caption {
+  color: #111827;
+}
+
+.thumbnail-blur--light.thumbnail-blur--soft .thumbnail-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F700 0%, #F7F7F799 100%);
+}
+
+.thumbnail-blur--light.thumbnail-blur--strong .thumbnail-blur__fade {
+  background: linear-gradient(to bottom, #F7F7F700 0%, #F7F7F7D9 100%);
+}
+
+/* Placeholder art. Export omitted x/y; sizes and fills are from the component.
+   Light and dark use the blob colours recorded for that mode. */
+.thumbnail-blur__art {
+  background:
+    radial-gradient(circle 91px at 18% 16%, var(--blob-1) 99%, transparent 100%),
+    radial-gradient(circle 86.5px at 78% 12%, var(--blob-2) 99%, transparent 100%),
+    radial-gradient(circle 81.5px at 48% 28%, var(--blob-3) 99%, transparent 100%),
+    radial-gradient(circle 77px at 12% 48%, var(--blob-4) 99%, transparent 100%),
+    radial-gradient(circle 72px at 70% 46%, var(--blob-5) 99%, transparent 100%),
+    radial-gradient(circle 67px at 40% 62%, var(--blob-6) 99%, transparent 100%),
+    radial-gradient(circle 62.5px at 84% 68%, var(--blob-7) 99%, transparent 100%),
+    radial-gradient(circle 57.5px at 22% 78%, var(--blob-8) 99%, transparent 100%),
+    radial-gradient(circle 117px at 58% 88%, var(--blob-9) 99%, transparent 100%);
+}
+
+.thumbnail-blur--light,
+.thumbnail-blur:not(.thumbnail-blur--dark) {
+  --blob-1: #FFE95C;
+  --blob-2: #6BFF91;
+  --blob-3: #5CA5FF;
+  --blob-4: #AB6BFF;
+  --blob-5: #FF6BBA;
+  --blob-6: #FF6E6B;
+  --blob-7: #FF8F5C;
+  --blob-8: #FFE95C;
+  --blob-9: #6BFF91;
+}
+
+.thumbnail-blur--dark,
+[data-theme="dark"] .thumbnail-blur:not(.thumbnail-blur--light) {
+  --blob-1: #FF6BBA;
+  --blob-2: #FF6E6B;
+  --blob-3: #FF8F5C;
+  --blob-4: #FFE95C;
+  --blob-5: #6BFF91;
+  --blob-6: #5CA5FF;
+  --blob-7: #AB6BFF;
+  --blob-8: #FF6BBA;
+  --blob-9: #FF6E6B;
+}
+
+.thumbnail-blur--light {
+  --blob-1: #FFE95C;
+  --blob-2: #6BFF91;
+  --blob-3: #5CA5FF;
+  --blob-4: #AB6BFF;
+  --blob-5: #FF6BBA;
+  --blob-6: #FF6E6B;
+  --blob-7: #FF8F5C;
+  --blob-8: #FFE95C;
+  --blob-9: #6BFF91;
+}

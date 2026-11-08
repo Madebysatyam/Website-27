@@ -1,0 +1,51 @@
+/* Self-hosted faces for Madebysatyam-27.
+   PP Neue Montreal is licensed from Pangram Pangram. See fonts/LICENSE-NOTE.
+   JetBrains Mono is OFL. See fonts/JetBrainsMono-OFL.txt.
+   The Code style uses the official JetBrains Mono 2.304 Regular woff2
+   (weight 400). It is not loaded from a CDN. */
+
+/* Body and Caption. Name table: family "PP Neue Montreal Text", style Book.
+   OS/2 usWeightClass in the file is 350. font/weight/regular is 400, and
+   Book text styles are specified at 400, so the descriptor is 400 and the
+   file is used as-is (no synthesised weight). */
+@font-face {
+  font-family: "PP Neue Montreal Text";
+  src: url("../fonts/PPNeueMontrealText-Book.woff2") format("woff2"),
+    url("../fonts/PPNeueMontrealText-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Display, Heading, Label, Overline.
+   Name table: family "Neue Montreal", style Medium.
+   Full name: "Neue Montreal Medium". usWeightClass 500. */
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../fonts/PPNeueMontreal-Medium.woff2") format("woff2"),
+    url("../fonts/PPNeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Umbrella family token font/family/sans = "PP Neue Montreal".
+   Regular cut. Text styles do not use this face. */
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../fonts/PPNeueMontreal-Regular.woff2") format("woff2"),
+    url("../fonts/PPNeueMontreal-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Code. styles.json: JetBrains Mono Regular, 14 / 20, weight regular (400).
+   Fallback if the file fails to load: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace. */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

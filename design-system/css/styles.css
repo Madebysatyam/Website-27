@@ -1,0 +1,282 @@
+/* Text styles, elevation, overlay blur, and grids.
+   Type metrics come from styles.json and the bound typography tokens.
+   Letter-spacing tokens are percent of font size, matching Figma. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  font-synthesis: none;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family-sans-text), "PP Neue Montreal", sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-m);
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-family-sans-display), "PP Neue Montreal", sans-serif;
+  font-weight: var(--font-weight-medium);
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-family-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-s);
+  line-height: var(--font-line-height-s);
+}
+
+.text-display-l,
+.text-display-m,
+.text-display-s,
+.text-heading-h1,
+.text-heading-h2,
+.text-heading-h3,
+.text-heading-h4,
+.text-heading-h5,
+.text-heading-h6,
+.text-label,
+.text-overline {
+  font-family: var(--font-family-sans-display), "PP Neue Montreal", sans-serif;
+  font-weight: var(--font-weight-medium);
+  font-style: normal;
+  font-synthesis: none;
+  margin: 0;
+}
+
+.text-body-l,
+.text-body-m,
+.text-body-s,
+.text-caption {
+  font-family: var(--font-family-sans-text), "PP Neue Montreal", sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  font-synthesis: none;
+  margin: 0;
+}
+
+.text-code {
+  font-family: var(--font-family-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  font-synthesis: none;
+  margin: 0;
+}
+
+.text-display-l {
+  font-size: var(--font-size-7xl);
+  line-height: var(--font-line-height-7xl);
+  letter-spacing: var(--font-letter-spacing-tighter);
+}
+
+.text-display-m {
+  font-size: var(--font-size-6xl);
+  line-height: var(--font-line-height-6xl);
+  letter-spacing: var(--font-letter-spacing-tighter);
+}
+
+.text-display-s {
+  font-size: var(--font-size-5xl);
+  line-height: var(--font-line-height-5xl);
+  letter-spacing: var(--font-letter-spacing-tight);
+}
+
+.text-heading-h1 {
+  font-size: var(--font-size-4xl);
+  line-height: var(--font-line-height-4xl);
+  letter-spacing: var(--font-letter-spacing-tight);
+}
+
+.text-heading-h2 {
+  font-size: var(--font-size-3xl);
+  line-height: var(--font-line-height-3xl);
+  letter-spacing: var(--font-letter-spacing-tight);
+}
+
+.text-heading-h3 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--font-line-height-2xl);
+  letter-spacing: var(--font-letter-spacing-tight);
+}
+
+.text-heading-h4 {
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-height-xl);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+.text-heading-h5 {
+  font-size: var(--font-size-l);
+  line-height: var(--font-line-height-l);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+.text-heading-h6 {
+  font-size: var(--font-size-m);
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+.text-body-l {
+  font-size: var(--font-size-l);
+  line-height: var(--font-line-height-l);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+.text-body-m {
+  font-size: var(--font-size-m);
+  line-height: var(--font-line-height-m);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+.text-body-s {
+  font-size: var(--font-size-s);
+  line-height: var(--font-line-height-s);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+.text-label {
+  font-size: var(--font-size-s);
+  line-height: var(--font-line-height-s);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+.text-caption {
+  font-size: var(--font-size-xs);
+  line-height: var(--font-line-height-xs);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+.text-overline {
+  font-size: var(--font-size-xs);
+  line-height: var(--font-line-height-xs);
+  letter-spacing: var(--font-letter-spacing-widest);
+  text-transform: uppercase;
+}
+
+.text-code {
+  font-size: var(--font-size-s);
+  line-height: var(--font-line-height-s);
+  letter-spacing: var(--font-letter-spacing-normal);
+}
+
+/* Elevation. Effect styles, not colour tokens. 8-digit hex is #RRGGBBAA. */
+:root {
+  --elevation-s: 0 1px 2px 0 #0F12170F;
+  --elevation-m: 0 4px 8px -2px #0F121714, 0 2px 4px -2px #0F12170A;
+  --elevation-l: 0 12px 24px -4px #0F12171A, 0 4px 8px -2px #0F12170A;
+  --elevation-xl: 0 24px 48px -12px #0F12172E;
+}
+
+.elevation-s { box-shadow: var(--elevation-s); }
+.elevation-m { box-shadow: var(--elevation-m); }
+.elevation-l { box-shadow: var(--elevation-l); }
+.elevation-xl { box-shadow: var(--elevation-xl); }
+
+/* Overlay blurs. Blur/Overlay/lg is radius 16 bound to Dimensions blur/m.
+   The style description says blur/l; the effect radius is 16. */
+.blur-overlay-sm {
+  -webkit-backdrop-filter: blur(var(--blur-s));
+  backdrop-filter: blur(var(--blur-s));
+}
+
+.blur-overlay-md,
+.blur-overlay-lg {
+  -webkit-backdrop-filter: blur(var(--blur-m));
+  backdrop-filter: blur(var(--blur-m));
+}
+
+/* Fixed frames at the breakpoint widths. Columns, gutters, and margins
+   are the Grid tokens. Padding is the Figma stretch offset. */
+.grid-mobile,
+.grid-tablet,
+.grid-desktop,
+.layout-grid {
+  display: grid;
+  box-sizing: border-box;
+}
+
+.grid-mobile {
+  width: var(--layout-mobile);
+  grid-template-columns: repeat(var(--grid-columns-mobile), minmax(0, 1fr));
+  column-gap: var(--grid-gutter-mobile);
+  padding-inline: var(--grid-margin-mobile);
+}
+
+.grid-tablet {
+  width: var(--layout-tablet);
+  grid-template-columns: repeat(var(--grid-columns-tablet), minmax(0, 1fr));
+  column-gap: var(--grid-gutter-tablet);
+  padding-inline: var(--grid-margin-tablet);
+}
+
+.grid-desktop {
+  width: var(--layout-desktop);
+  grid-template-columns: repeat(var(--grid-columns-desktop), minmax(0, 1fr));
+  column-gap: var(--grid-gutter-desktop);
+  padding-inline: var(--grid-margin-desktop);
+}
+
+.layout-grid {
+  width: 100%;
+  max-width: var(--layout-desktop);
+  margin-inline: auto;
+  grid-template-columns: repeat(var(--grid-columns-mobile), minmax(0, 1fr));
+  column-gap: var(--grid-gutter-mobile);
+  padding-inline: var(--grid-margin-mobile);
+}
+
+@media (min-width: 768px) {
+  .layout-grid {
+    grid-template-columns: repeat(var(--grid-columns-tablet), minmax(0, 1fr));
+    column-gap: var(--grid-gutter-tablet);
+    padding-inline: var(--grid-margin-tablet);
+  }
+}
+
+@media (min-width: 1440px) {
+  .layout-grid {
+    grid-template-columns: repeat(var(--grid-columns-desktop), minmax(0, 1fr));
+    column-gap: var(--grid-gutter-desktop);
+    padding-inline: var(--grid-margin-desktop);
+  }
+}
+
+.grid-baseline-8 {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #3380FF14 0,
+    #3380FF14 1px,
+    transparent 1px,
+    transparent var(--grid-baseline-unit)
+  );
+}
