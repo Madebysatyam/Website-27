@@ -1,30 +1,33 @@
 # Website-27
 
-Portfolio site for Madebysatyam-27. The design system in this repo is the Figma file `PiRNuJiRECiSiCr6isN26H` (exported 2026-11-08) as plain CSS: the same token names, the same values, and the Tag and Progressive Blur components.
+Portfolio site for Madebysatyam-27. The design system is the Figma file `PiRNuJiRECiSiCr6isN26H` (exported 2026-11-08) as CSS: the same token names, the same values, and the Tag and Progressive Blur components.
 
-There is no application framework and no Tailwind. Tailwind theme mapping is omitted because Tailwind is not part of the project. If a later page adds it, point the theme at these custom properties. Do not copy the hexes into the Tailwind config.
+The site shell is Next.js. React components in `components/` render those CSS classes. Token values stay in `design-system/css/tokens.css`. There is no Tailwind. If a later page adds it, point every utility at these custom properties. Do not copy the hexes into a Tailwind config.
 
 A short map of the system is [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md). Detailed pages are in [docs/](docs/README.md).
 
 ## Setup
 
-Python 3.9+ is required for the token check and the static server. Node 18+ can run the same commands through npm. There are no packages to install.
+Node 18+ and Python 3.9+ are required. Python runs the token check. Next.js serves the site.
 
 ```bash
+npm install
 npm run verify-tokens
 npm run dev
 ```
 
-The preview is http://127.0.0.1:4173/preview.html. Add `?theme=light` or `?theme=dark` to force a theme before paint. The header switch does the same thing after load.
+The preview is http://127.0.0.1:3000. Add `?theme=light` or `?theme=dark` to force a theme before paint. The header switch does the same thing after load.
 
-`npm run build` checks tokens and font files, then copies the preview, CSS, and fonts to `dist/` (gitignored).
+`npm run build` checks that `tokens.css` still matches the Figma export, then builds the Next.js app.
 
-You can call the scripts without npm:
+The CSS specimen also opens on its own, with no React:
 
 ```bash
 python3 design-system/scripts/verify-tokens.py
 python3 -m http.server 4173 --bind 127.0.0.1 --directory design-system
 ```
+
+That address is http://127.0.0.1:4173/preview.html.
 
 ## Folder structure
 
@@ -36,6 +39,8 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory design-system
 ├── CONTRIBUTING.md
 ├── CHANGELOG.md
 ├── package.json
+├── app/                     Next.js routes
+├── components/              Tag and Progressive Blur
 ├── docs/
 │   ├── colours.md
 │   ├── typography.md

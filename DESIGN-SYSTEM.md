@@ -2,7 +2,7 @@
 
 Plain CSS implementation of the Figma file `PiRNuJiRECiSiCr6isN26H`, exported 2026-11-08. Names and values match the export. Nothing is renamed, rounded, or restyled.
 
-The portfolio has no framework and no Tailwind, so there is no Tailwind theme. Components are CSS classes.
+The site runs on Next.js. Components are React wrappers around the CSS classes. There is no Tailwind theme. Colour and size still come from these stylesheets.
 
 ## Files
 
@@ -12,7 +12,10 @@ The portfolio has no framework and no Tailwind, so there is no Tailwind theme. C
 | `design-system/css/fonts.css` | PP Neue Montreal Text Book, Neue Montreal Medium, PP Neue Montreal Regular, JetBrains Mono Regular. |
 | `design-system/css/styles.css` | 16 text styles, elevation, overlay blur, grids. |
 | `design-system/css/components.css` | Tag and Progressive Blur. |
-| `design-system/preview.html` | Light and dark specimen. |
+| `design-system/preview.html` | Static specimen, no framework. |
+| `app/page.tsx` | The same specimen in Next.js. |
+| `components/Tag.tsx` | Tag. Uses the CSS classes. |
+| `components/ProgressiveBlur.tsx` | Progressive blur and thumbnail. |
 | `design-system/source/tokens.json` | Source of truth for `tokens.css`. |
 | `design-system/scripts/verify-tokens.py` | Fails if a CSS value drifts from the JSON. |
 
