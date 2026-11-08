@@ -4,14 +4,14 @@ This repository is the Website-27 portfolio. The design system under `design-sys
 
 ## Setup
 
-Python 3.9 or newer is required. Node is only used to run the npm scripts.
+Node 18 or newer and Python 3.9 or newer are required. Install packages with `npm install`, then:
 
 ```bash
 npm run verify-tokens
 npm run dev
 ```
 
-Open http://127.0.0.1:4173/preview.html. There are no npm dependencies. The scripts call Python.
+Open http://127.0.0.1:3000. Tag and Progressive Blur in React must keep using the classes in `design-system/css/components.css`. Do not restate colours or spacing as raw values in a component.
 
 ## Tokens
 
