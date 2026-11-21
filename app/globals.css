@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --duration-press: 160ms;
+
+  --surface: #f6f4f1;
+  --ink: #141414;
+  --ink-muted: color-mix(in srgb, var(--ink) 62%, transparent);
+  --accent: #2a5cff;
+}
+
+html {
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: "PP Neue Montreal", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
